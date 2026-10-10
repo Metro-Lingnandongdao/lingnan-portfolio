@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560">
   <defs><pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#bdc9d2" stroke-opacity=".1"/></pattern></defs>
-  <rect width="960" height="560" fill="#101b2a"/><rect width="960" height="560" fill="url(#grid)"/>
-  <text x="54" y="55" fill="#8bb5d5" font-family="monospace" font-size="18" letter-spacing="4">NETWORK STORIES / 02</text>
-  <text x="54" y="121" fill="#f5f2eb" font-family="'Noto Serif SC',serif" font-size="42">环线，为什么总有话题？</text>
+  <rect width="960" height="560" fill="#102b3a"/><rect width="960" height="560" fill="url(#grid)"/>
+  <text x="54" y="55" fill="#5b9ed2" font-family="monospace" font-size="18" letter-spacing="4">NETWORK STORIES / 02</text>
+  <text x="54" y="121" fill="#edf4f2" font-family="'Noto Serif SC',serif" font-size="42">环线，为什么总有话题？</text>
   <text x="56" y="157" fill="#aab7c1" font-family="monospace" font-size="15" letter-spacing="3">INTERCITY · ROUTE ANALYSIS</text>
-  <path d="M110 302C110 220 178 188 280 188H630C728 188 794 240 794 315C794 389 730 424 630 424H280C175 424 110 382 110 302Z" fill="none" stroke="#f0a35b" stroke-width="12" stroke-linecap="round"/>
-  <path d="M188 306C188 254 227 233 294 233H615C681 233 722 259 722 309C722 356 680 379 615 379H294C228 379 188 355 188 306Z" fill="none" stroke="#8bb5d5" stroke-width="6"/>
-  <path d="M470 188V104M470 424V485M110 302H42M794 315H884" fill="none" stroke="#a7c7a3" stroke-width="7" stroke-linecap="round"/>
-  <g fill="#101b2a" stroke="#f5f2eb" stroke-width="6"><circle cx="280" cy="188" r="12"/><circle cx="630" cy="188" r="12"/><circle cx="794" cy="315" r="12"/><circle cx="630" cy="424" r="12"/><circle cx="280" cy="424" r="12"/><circle cx="110" cy="302" r="12"/><circle cx="470" cy="188" r="12"/><circle cx="470" cy="424" r="12"/></g>
-  <rect x="387" y="272" width="168" height="66" rx="33" fill="#f5f2eb"/><text x="471" y="298" text-anchor="middle" fill="#101b2a" font-family="monospace" font-size="12" letter-spacing="2">LOOP LINE</text><text x="471" y="322" text-anchor="middle" fill="#c97835" font-family="'Noto Serif SC',serif" font-size="18">环线观察</text>
-  <text x="56" y="526" fill="#aab7c1" font-family="monospace" font-size="14" letter-spacing="2">跨线运营 · 换乘结构 · 城市网络</text><text x="905" y="526" text-anchor="end" fill="#8bb5d5" font-family="monospace" font-size="16">02 / 03</text>
+  <path d="M110 302C110 220 178 188 280 188H630C728 188 794 240 794 315C794 389 730 424 630 424H280C175 424 110 382 110 302Z" fill="none" stroke="#45b8a8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M188 306C188 254 227 233 294 233H615C681 233 722 259 722 309C722 356 680 379 615 379H294C228 379 188 355 188 306Z" fill="none" stroke="#5b9ed2" stroke-width="6"/>
+  <path d="M470 188V104M470 424V485M110 302H42M794 315H884" fill="none" stroke="#65c6b4" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#102b3a" stroke="#edf4f2" stroke-width="6"><circle cx="280" cy="188" r="12"/><circle cx="630" cy="188" r="12"/><circle cx="794" cy="315" r="12"/><circle cx="630" cy="424" r="12"/><circle cx="280" cy="424" r="12"/><circle cx="110" cy="302" r="12"/><circle cx="470" cy="188" r="12"/><circle cx="470" cy="424" r="12"/></g>
+  <rect x="387" y="272" width="168" height="66" rx="33" fill="#edf4f2"/><text x="471" y="298" text-anchor="middle" fill="#102b3a" font-family="monospace" font-size="12" letter-spacing="2">LOOP LINE</text><text x="471" y="322" text-anchor="middle" fill="#c97835" font-family="'Noto Serif SC',serif" font-size="18">环线观察</text>
+  <text x="56" y="526" fill="#aab7c1" font-family="monospace" font-size="14" letter-spacing="2">跨线运营 · 换乘结构 · 城市网络</text><text x="905" y="526" text-anchor="end" fill="#5b9ed2" font-family="monospace" font-size="16">02 / 03</text>
 </svg>
