@@ -159,3 +159,22 @@ lingnan-portfolio/
 新增 `rail-atlas.html` 资料页，覆盖广州、佛山、深圳、东莞、香港、澳门、广东城际、清远磁浮及广东省内国铁，并加入线路、重点车站、车辆基地和系统工程的本地索引。页面还提供按需读取维基百科公开 API 表格的功能。
 
 请阅读 [`RAIL-ATLAS-SOURCES.md`](RAIL-ATLAS-SOURCES.md) 了解本地条目数量、主要来源、状态标注规则、图片来源和维护说明。需要注意：本地目录是精选索引，并不等于全网全部车站或基地的完整总表；动态表格同步也依赖访问者浏览器能够连接维基百科 API。维基共享资源图片使用远程文件链接，不是随仓库打包下载。
+
+
+## 图片显示修复（2026-10-10）
+
+新版部署压缩包的 ZIP 顶层直接包含 `index.html`、其他页面与 `assets/`，请将这些顶层内容上传至 GitHub Pages 当前发布目录，不要将外层文件夹 `lingnan_edit` 再嵌套进去。`asset-recovery.js` 会尝试修复常见的 `assets/` 相对路径和嵌套目录问题，并在原图或远程图不可用时显示本地示意图。
+
+查看 `IMAGE-SOURCES.md` 获取线路图和照片的原始文件页、许可说明及标注边界。
+
+## 图片与视频加载修复
+
+- 网站文件以 ZIP 根目录结构打包，上传时把此目录中的网页文件和 `assets/` 放入仓库的网站根目录，不要额外套 `lingnan_edit/` 文件夹。
+- `asset-recovery.js` 为无法读取的本地图、外链图及动态加载图提供回退，避免空白图片框。
+- 视频页优先读取本地缓存的 B 站公开元数据和封面；仓库含 `.github/workflows/update-bilibili-covers.yml`，首次上传后可到 **Actions** 手动运行 `Refresh Bilibili video covers`，也会每月尝试更新。它仅获取公开元数据与封面缩略图，不下载视频内容。运行是否成功取决于 GitHub Actions 的网络访问以及 B 站接口限流。
+- B 站内嵌播放器受平台和浏览器策略影响；无法在本站播放时，请使用播放器画面右下角的原视频链接。
+- 图片和线路图来源、版权说明见 `IMAGE-SOURCES.md`。
+
+### B站视频标题与封面缓存
+
+`videos.html` 优先读取 `assets/bilibili-video-metadata.json` 中由 GitHub Actions 缓存的公开元数据。将本次更新推送到 GitHub 后，`.github/workflows/update-bilibili-covers.yml` 会尝试读取 B 站公开信息并下载封面缩略图（不下载视频文件）。也可以在仓库的 Actions 页面手动运行 `Refresh Bilibili video covers`。如果 B 站限制访问，工作流会显示失败日志；页面保留原视频链接和占位封面。

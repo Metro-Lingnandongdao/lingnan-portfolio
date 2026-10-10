@@ -3,3 +3,46 @@
 @media(max-width:1000px){.atlas-system-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-entry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-engineering-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-hero{grid-template-columns:1fr .78fr}.atlas-photo-main{inset:25px 6px 28px 6px}.atlas-hero-visual{min-height:330px}}
 @media(max-width:760px){.atlas-hero{display:block;padding-top:49px;min-height:0}.atlas-hero-copy{padding-bottom:25px}.atlas-hero h1{font-size:40px}.atlas-hero-desc{font-size:12px}.atlas-hero-visual{min-height:280px;margin:8px 0 20px}.atlas-photo-main{inset:8px 8px 20px}.atlas-hero-foot{min-height:45px;font-size:7px}.atlas-stats{grid-template-columns:repeat(2,1fr);gap:20px 0}.atlas-stats>div:nth-child(2){border-right:0}.atlas-stats>div:nth-child(3){padding-left:0}.atlas-stats>div{padding-left:18px;padding-right:15px}.atlas-section,.atlas-systems-engineering,.atlas-sources{padding-top:60px;padding-bottom:65px}.atlas-heading-row{display:block;margin:28px 0 23px}.atlas-asof{display:inline-block;margin-top:16px}.atlas-tools{display:grid;grid-template-columns:1fr 1fr;align-items:end}.atlas-search{grid-column:1/-1;min-width:0}.atlas-filter-block{min-width:0}.atlas-reset{grid-column:1/-1}.atlas-result-bar{margin:13px 0}.wiki-sync-panel{padding:14px}.wiki-sync-controls{grid-template-columns:1fr}.wiki-sync-controls label{grid-column:auto}.wiki-sync-controls .button{width:100%}.wiki-table-search-wrap{align-items:stretch;flex-direction:column}.atlas-source-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:500px){.atlas-system-grid,.atlas-entry-grid{grid-template-columns:1fr}.atlas-system-photo{height:190px}.atlas-engineering-grid{grid-template-columns:1fr}.atlas-source-grid{grid-template-columns:1fr}.atlas-stat-label{font-size:7px}.atlas-stats strong{font-size:28px}.atlas-stats small{font-size:9px}.atlas-entry-card{padding:15px}.atlas-hero-foot{align-items:flex-start;justify-content:center;flex-direction:column;padding:8px 0}.atlas-filter-block select{font-size:9px}.wiki-table-scroll th,.wiki-table-scroll td{min-width:105px}}
+
+
+/* Image reliability, Wikimedia map gallery, and operator media desk */
+.image-recovery-note{font-size:10px;color:#6f858b}
+.atlas-map-gallery-section{background:#f1f6f3}
+.atlas-map-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.atlas-map-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;background:#fff;border:1px solid #dce8e1;border-radius:10px;box-shadow:0 4px 18px rgba(16,43,58,.035)}
+.atlas-map-picture{display:block;position:relative;height:220px;background:#e7f1ed;overflow:hidden}
+.atlas-map-picture img{display:block;width:100%;height:100%;object-fit:contain;padding:9px;transition:transform .25s}
+.atlas-map-picture:hover img{transform:scale(1.02)}
+.atlas-map-stamp{position:absolute;left:11px;top:11px;background:rgba(16,43,58,.9);color:#d7f0e9;padding:6px 8px;border-radius:4px;font:8px var(--mono);letter-spacing:.08em}
+.atlas-map-card-body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.atlas-map-card h3{font:600 15px/1.5 var(--serif);color:#1c3547;margin:0}
+.atlas-map-card p{font:10px/1.8 var(--serif);color:#75848a;margin:0;min-height:36px}
+.atlas-map-card-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:8px;border-top:1px solid #edf1ed}
+.atlas-map-card-links a{font-size:9px;color:#168f86;border:1px solid #cfe0d8;border-radius:5px;padding:7px 8px}
+.atlas-map-card-links a:hover{background:#e8f5ef}
+.atlas-entry-media{height:108px;overflow:hidden;background:#edf4f1;border-radius:6px;margin:11px 0 2px;position:relative}
+.atlas-entry-media img{width:100%;height:100%;object-fit:cover;display:block}
+.atlas-entry-media a{position:absolute;right:6px;bottom:6px;background:rgba(16,43,58,.88);color:#fff;font:8px var(--sans);padding:5px 7px;border-radius:4px}
+.operator-media-section{background:#f6f9f6;padding-top:74px;padding-bottom:78px}
+.operator-media-heading{display:flex;justify-content:space-between;gap:25px;margin:27px 0 23px}
+.operator-media-heading h2{font:500 clamp(26px,3.5vw,42px)/1.45 var(--serif);letter-spacing:-.04em;margin:0 0 9px;color:#20364a}
+.operator-media-heading h2 em{font-style:normal;color:#168f86}
+.operator-media-heading p{font-size:12px;line-height:1.9;color:#75818a;max-width:740px;margin:0}
+.operator-media-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.operator-media-card{min-width:0;background:#fff;border:1px solid #e0e8e2;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 3px 15px rgba(16,43,58,.035)}
+.operator-media-photo{height:160px;background:#e4efea;position:relative;overflow:hidden}
+.operator-media-photo img{width:100%;height:100%;display:block;object-fit:cover}
+.operator-media-photo span{position:absolute;left:10px;top:10px;background:rgba(16,43,58,.88);color:#e5f2ef;border-radius:4px;padding:6px 8px;font:8px var(--mono);letter-spacing:.08em}
+.operator-media-card-body{padding:14px 15px 15px;display:flex;flex-direction:column;gap:9px;flex:1}
+.operator-media-card h3{font:600 16px/1.5 var(--serif);margin:0;color:#1c3547}
+.operator-media-caption{color:#7e8e92;font:10px/1.8 var(--serif);margin:0}
+.operator-media-map{height:122px;display:block;border:1px solid #e3ebe5;border-radius:6px;background:#f0f7f3;overflow:hidden}
+.operator-media-map img{width:100%;height:100%;display:block;object-fit:contain;padding:5px}
+.operator-media-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:10px;border-top:1px solid #edf1ed}
+.operator-media-links a{font-size:9px;color:#168f86;border:1px solid #cfe0d8;border-radius:5px;padding:7px 8px}
+.operator-card-media{display:block;height:94px;margin:-15px -15px 13px;background:#eaf3ef;overflow:hidden;border-radius:13px 13px 0 0}
+.operator-card-media img{display:block;width:100%;height:100%;object-fit:cover}
+.operator-card{padding-top:15px!important}
+.operator-card .operator-card-top{margin-bottom:9px}
+@media(max-width:1000px){.atlas-map-grid,.operator-media-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-entry-media{height:118px}}
+@media(max-width:650px){.atlas-map-grid,.operator-media-grid{grid-template-columns:1fr}.atlas-map-picture{height:210px}.operator-media-photo{height:180px}.operator-card-media{height:110px}.operator-media-heading{display:block}}

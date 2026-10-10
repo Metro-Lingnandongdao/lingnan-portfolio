@@ -29,7 +29,7 @@
       }
       window[callback] = (value) => finish(null, value);
       script.onerror = () => finish(new Error('Bilibili JSONP unavailable'));
-      script.src = `https://api.bilibili.com/x/web-interface/view?bvid=${encodeURIComponent(bvid)}&jsonp=${encodeURIComponent(callback)}`;
+      script.src = `https://api.bilibili.com/x/web-interface/view?bvid=${encodeURIComponent(bvid)}&jsonp=jsonp&callback=${encodeURIComponent(callback)}`;
       document.head.appendChild(script);
     });
   }
@@ -91,7 +91,9 @@
       const duration = durationLabel(data.duration);
       if (date) parts.push(`投稿日期：${date}`);
       if (duration) parts.push(`时长：${duration}`);
+      if (data.owner && typeof data.owner === 'object' && data.owner.name) parts.push(`UP主：${data.owner.name}`);
       if (typeof data.stat?.view === 'number') parts.push(`播放：${data.stat.view.toLocaleString('zh-CN')}`);
+      if (typeof data.stat?.like === 'number' && data.stat.like > 0) parts.push(`点赞：${data.stat.like.toLocaleString('zh-CN')}`);
       descriptionNode.textContent = parts.length ? parts.join(' · ') : (card.dataset.fallbackDescription || '点击查看 B 站原视频。');
     }
     if (cover && (data.localCover || data.pic)) {
@@ -122,10 +124,18 @@
     iframe.allowFullscreen = true;
     iframe.referrerPolicy = 'origin';
     iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-    frame.replaceChildren(iframe);
-    const button = card.querySelector('[data-video-play]');
-    if (button) button.disabled = true;
-    setStatus(card, '已加载 B 站官方播放器');
+    const fallbackLink = document.createElement('a');
+    fallbackLink.className = 'video-source-overlay';
+    fallbackLink.href = `https://www.bilibili.com/video/${encodeURIComponent(bvid)}/`;
+    fallbackLink.target = '_blank';
+    fallbackLink.rel = 'noopener noreferrer';
+    fallbackLink.textContent = '播放器无法显示？前往 B 站观看 ↗';
+    const playerShell = document.createElement('div');
+    playerShell.className = 'video-player-frame';
+    playerShell.append(iframe, fallbackLink);
+    iframe.addEventListener('error', () => setStatus(card, '本站播放器加载失败；请点击画面中的链接前往 B 站观看。', true));
+    frame.replaceChildren(playerShell);
+    setStatus(card, '已请求 B 站官方播放器；若画面空白，请点击播放器右下角链接。');
   }
 
   cards.forEach(card => {
@@ -159,7 +169,7 @@
       const descriptionNode = card.querySelector('[data-video-description]');
       if (titleNode && !titleNode.textContent.trim()) titleNode.textContent = fallbackTitle;
       if (descriptionNode && !descriptionNode.textContent.trim()) descriptionNode.textContent = card.dataset.fallbackDescription || '标题与封面接口暂不可用；可打开 B 站原页面查看完整内容。';
-      setStatus(card, 'B站接口暂不可用；可查看原视频', true);
+      setStatus(card, '暂未取得缓存的 B 站元数据；请检查仓库 Actions 中的 Refresh Bilibili video covers 任务，或打开原视频查看。', true);
       card.dataset.videoMetaLoaded = 'true';
     }
   }
