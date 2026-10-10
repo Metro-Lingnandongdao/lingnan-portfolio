@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#172b3c"/><stop offset="1" stop-color="#243d4a"/></linearGradient><pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#aec2c9" stroke-opacity=".13"/></pattern></defs>
+  <rect width="960" height="560" fill="url(#bg)"/><rect width="960" height="560" fill="url(#grid)"/>
+  <text x="54" y="54" fill="#f0a35b" font-family="monospace" font-size="18" letter-spacing="4">FIELD NOTES / 01</text>
+  <text x="54" y="119" fill="#f7f2e7" font-family="'Noto Serif SC',serif" font-size="42">有轨电车的下一站</text>
+  <text x="56" y="155" fill="#b8c6cc" font-family="monospace" font-size="15" letter-spacing="3">LOW-VOLUME RAIL · CONCEPT COVER</text>
+  <circle cx="760" cy="190" r="88" fill="#f0a35b" opacity=".95"/>
+  <path d="M-20 443H245Q280 443 280 408V350Q280 320 312 320H550Q580 320 580 350V443H1000" fill="none" stroke="#f0a35b" stroke-width="10" stroke-linecap="round"/>
+  <path d="M-20 468H245Q305 468 305 408V375Q305 345 337 345H525Q605 345 605 405V468H1000" fill="none" stroke="#8bb5d5" stroke-width="3" stroke-opacity=".7"/>
+  <g fill="#172b3c" stroke="#f5eee2" stroke-width="7"><circle cx="125" cy="443" r="12"/><circle cx="280" cy="380" r="12"/><circle cx="415" cy="320" r="12"/><circle cx="580" cy="443" r="12"/><circle cx="770" cy="443" r="12"/></g>
+  <g transform="translate(120 245)"><path d="M0 49Q0 0 50 0H400Q444 0 444 48V142H0Z" fill="#f5f1e7" stroke="#b5c6c0" stroke-width="5"/><path d="M0 53H444V76H0Z" fill="#7fa99e"/><path d="M17 88H425V130H17Z" fill="#dce8e1"/>
+    <g fill="#3e6470"><rect x="28" y="91" width="63" height="34" rx="4"/><rect x="105" y="91" width="63" height="34" rx="4"/><rect x="182" y="91" width="63" height="34" rx="4"/><rect x="259" y="91" width="63" height="34" rx="4"/></g><rect x="337" y="83" width="51" height="59" rx="4" fill="#8caea4" stroke="#3e6470" stroke-width="4"/>
+    <circle cx="88" cy="148" r="24" fill="#24323a" stroke="#b5c6c0" stroke-width="7"/><circle cx="350" cy="148" r="24" fill="#24323a" stroke="#b5c6c0" stroke-width="7"/>
+  </g>
+  <text x="56" y="526" fill="#b8c6cc" font-family="monospace" font-size="14" letter-spacing="2">路权 · 接驳 · 客流 · 城市尺度</text>
+  <text x="905" y="526" text-anchor="end" fill="#f0a35b" font-family="monospace" font-size="16">01 / 03</text>
+</svg>

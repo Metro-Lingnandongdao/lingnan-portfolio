@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620">
+  <rect width="960" height="620" fill="#e7e4da"/><rect x="0" y="475" width="960" height="145" fill="#d5ded9"/>
+  <text x="44" y="48" fill="#9b5d2e" font-family="monospace" font-size="14" letter-spacing="3">CONCEPT / 04</text><text x="44" y="91" fill="#152334" font-family="'Noto Serif SC',serif" font-size="34">车站导视 · 信息层级</text><text x="46" y="120" fill="#737c7f" font-family="monospace" font-size="12" letter-spacing="2">WAYFINDING SYSTEM · SIGNAGE STUDY</text>
+  <path d="M220 130V500M740 130V500" stroke="#8b9895" stroke-width="8"/><path d="M190 190H770V450H190Z" fill="#152334"/><path d="M190 190H230V450H190Z" fill="#f0a35b"/>
+  <rect x="258" y="220" width="470" height="65" fill="#273b4d"/><text x="285" y="261" fill="#f5f2eb" font-family="'Noto Serif SC',serif" font-size="27">换乘指引</text><text x="694" y="260" text-anchor="end" fill="#aab7c1" font-family="monospace" font-size="15">TRANSFER</text>
+  <path d="M280 315H690" stroke="#596a77" stroke-width="2"/>
+  <g font-family="'Noto Serif SC',serif" font-size="22" fill="#f5f2eb"><text x="285" y="360">地铁线路</text><text x="285" y="407">城际铁路</text><text x="285" y="454">出入口</text></g>
+  <g font-family="monospace" font-size="15" fill="#8bb5d5"><text x="505" y="360">METRO</text><text x="505" y="407">INTERCITY</text><text x="505" y="454">EXIT</text></g><g fill="#f0a35b"><path d="M678 340l12 12-12 12v-8h-22v-8h22Z"/><path d="M678 387l12 12-12 12v-8h-22v-8h22Z"/><path d="M678 434l12 12-12 12v-8h-22v-8h22Z"/></g>
+  <rect x="785" y="210" width="118" height="170" fill="#f5f2eb" stroke="#b8c2bb" stroke-width="2"/><text x="804" y="241" fill="#152334" font-family="monospace" font-size="11">DESIGN RULES</text><circle cx="810" cy="268" r="5" fill="#f0a35b"/><text x="823" y="273" fill="#58666c" font-family="monospace" font-size="10">CLEAR</text><circle cx="810" cy="299" r="5" fill="#8bb5d5"/><text x="823" y="304" fill="#58666c" font-family="monospace" font-size="10">CONSISTENT</text><circle cx="810" cy="330" r="5" fill="#a7c7a3"/><text x="823" y="335" fill="#58666c" font-family="monospace" font-size="10">LEGIBLE</text>
+  <text x="44" y="575" fill="#737c7f" font-family="monospace" font-size="11" letter-spacing="2">ILLUSTRATIVE DESIGN · NO REAL STATION DATA</text>
+</svg>
