@@ -1,0 +1,44 @@
+{
+  "佛山地铁2050(V2026.3)(1).png": {
+    "title": "佛山地铁 2050+ 线路图",
+    "asset_path": "assets/佛山地铁2050(V2026.3)(1).png",
+    "preview_path": "assets/map-thumbnails/foshan-metro-2050-v2026-3.webp",
+    "original_bytes": 1257654,
+    "preview_bytes": 279514
+  },
+  "广州佛山实际走向2026【嶺南東道】V1.2公开版 主图.png": {
+    "title": "广州佛山地铁 2026 · 主图",
+    "asset_path": "assets/广州佛山实际走向2026【嶺南東道】V1.2公开版 主图.png",
+    "preview_path": "assets/map-thumbnails/guangzhou-foshan-2026-main.webp",
+    "original_bytes": 6383824,
+    "preview_bytes": 460790
+  },
+  "广州佛山实际走向2026【嶺南東道】V1.2公开版 附图.png": {
+    "title": "广州佛山地铁 2026 · 附图",
+    "asset_path": "assets/广州佛山实际走向2026【嶺南東道】V1.2公开版 附图.png",
+    "preview_path": "assets/map-thumbnails/guangzhou-foshan-2026-appendix.webp",
+    "original_bytes": 2779368,
+    "preview_bytes": 154610
+  },
+  "茂名轨道交通2050+（真实走向）V1.0[嶺南東道].png": {
+    "title": "茂名轨道交通 2050+",
+    "asset_path": "assets/茂名轨道交通2050+（真实走向）V1.0[嶺南東道].png",
+    "preview_path": "assets/map-thumbnails/maoming-rail-transit-2050.webp",
+    "original_bytes": 3063929,
+    "preview_bytes": 183080
+  },
+  "仙台轨道交通2040+（区域1）【V2026.3】(1).png": {
+    "title": "仙台轨道交通 2040+ · 区域 1",
+    "asset_path": "assets/仙台轨道交通2040+（区域1）【V2026.3】(1).png",
+    "preview_path": "assets/map-thumbnails/sendai-rail-transit-2040-region-1.webp",
+    "original_bytes": 4349023,
+    "preview_bytes": 364722
+  },
+  "仙台轨道交通2040+（区域2）【V2026.3】.png": {
+    "title": "仙台轨道交通 2040+ · 区域 2",
+    "asset_path": "assets/仙台轨道交通2040+（区域2）【V2026.3】.png",
+    "preview_path": "assets/map-thumbnails/sendai-rail-transit-2040-region-2.webp",
+    "original_bytes": 3375513,
+    "preview_bytes": 216804
+  }
+}
