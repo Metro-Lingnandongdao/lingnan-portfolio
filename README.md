@@ -178,3 +178,27 @@ lingnan-portfolio/
 ### B站视频标题与封面缓存
 
 `videos.html` 优先读取 `assets/bilibili-video-metadata.json` 中由 GitHub Actions 缓存的公开元数据。将本次更新推送到 GitHub 后，`.github/workflows/update-bilibili-covers.yml` 会尝试读取 B 站公开信息并下载封面缩略图（不下载视频文件）。也可以在仓库的 Actions 页面手动运行 `Refresh Bilibili video covers`。如果 B 站限制访问，工作流会显示失败日志；页面保留原视频链接和占位封面。
+
+
+## 新增：线路详情页、运营方媒体与铁路资讯
+- `line-details/line-001.html` 至 `line-details/line-099.html`：每条线路的独立详情页，包含线路色单线图、本地站序、设施、官方与维基来源链接。部分路线的站序仅为已收录节点；页面会尝试通过中文维基接口加载完整车站表。
+- `railway-media.js`：运营方列车／车站照片、标志和线网图展示；支持按需尝试检索 Wikimedia Commons，接口不可用时显示本地回退图或明确标注的非官方文字标识。
+- `NEWS-SOURCES.md`：铁路资讯来源与采编说明，包含公开政府、运营方及媒体入口。当前新闻是编辑整理的静态内容，并非后台自动更新。
+
+## 世界交通拜年纪专题（2026-10 更新）
+
+`sites.html` 已改为「世界交通拜年纪」团队介绍页，包含 B 站空间、视频投稿、合集及动态入口。账号公开资料同步脚本位于 `scripts/fetch_world_transport_bnj.py`，工作流为 `.github/workflows/refresh-world-transport-bnj.yml`。
+
+- 首次部署时使用本地主题标识和占位封面；它们不是官方头像或原视频封面。
+- 在 GitHub 仓库的 **Actions** 中手动运行 `Refresh World Transport New Year Gala`，或等待每周计划任务。工作流会尝试获取公开头像、最近视频标题/封面、合集和动态；成功后将缓存写回仓库。
+- B 站接口可能拒绝未登录请求或限流；同步失败会保留已有数据与官方入口。
+- 该脚本仅读取公开元数据与图片缩略图，不下载视频本体。
+- 更多来源和当前已确认作品见 `WORLD-TRANSPORT-BNJ-SOURCES.md`。
+
+
+## 微信公众号入口
+
+`about.html` 中新增个人公众号「嶺南東道」与世界交通拜年纪团队公众号「交建文宣」的信息卡片，支持复制名称以便在微信内搜索。公开网页检索未找到可验证的稳定公众号主页链接，因此未编造直达 URL。来源与后续补链说明见 `WECHAT-ACCOUNTS-SOURCES.md`。
+
+
+线路图原图已另存为 `assets/original-map-files/` 下的 ASCII 文件名，减少 GitHub Pages 对非 ASCII 路径与旧压缩包文件名编码的兼容问题。作品卡片中显示的中文文件名不变。

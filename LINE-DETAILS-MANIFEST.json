@@ -1,0 +1,893 @@
+[
+  {
+    "index": 0,
+    "file": "line-details/line-001.html",
+    "system": "广州地铁",
+    "name": "1号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁1号线",
+    "station_index": "西塱、芳村、陈家祠、公园前、体育西路、杨箕、广州东站"
+  },
+  {
+    "index": 1,
+    "file": "line-details/line-002.html",
+    "system": "广州地铁",
+    "name": "2号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁2号线",
+    "station_index": "嘉禾望岗、白云公园、纪念堂、公园前、海珠广场、昌岗、南洲、广州南站"
+  },
+  {
+    "index": 2,
+    "file": "line-details/line-003.html",
+    "system": "广州地铁",
+    "name": "3号线（含北延段）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁3号线",
+    "station_index": "海傍、番禺广场、客村、体育西路、广州东站、天河客运站、机场南、机场北"
+  },
+  {
+    "index": 3,
+    "file": "line-details/line-004.html",
+    "system": "广州地铁",
+    "name": "4号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁4号线",
+    "station_index": "黄村、车陂、大学城北、大学城南、低涌、蕉门、南沙客运港"
+  },
+  {
+    "index": 4,
+    "file": "line-details/line-005.html",
+    "system": "广州地铁",
+    "name": "5号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁5号线",
+    "station_index": "滘口、广州火车站、珠江新城、车陂南、鱼珠、黄埔新港"
+  },
+  {
+    "index": 5,
+    "file": "line-details/line-006.html",
+    "system": "广州地铁",
+    "name": "6号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁6号线",
+    "station_index": "浔峰岗、如意坊、北京路、东山口、燕塘、苏元、香雪"
+  },
+  {
+    "index": 6,
+    "file": "line-details/line-007.html",
+    "system": "广州地铁",
+    "name": "7号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁7号线",
+    "station_index": "美的大道、北滘公园、广州南站、大学城南、姬堂、燕山"
+  },
+  {
+    "index": 7,
+    "file": "line-details/line-008.html",
+    "system": "广州地铁",
+    "name": "8号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁8号线",
+    "station_index": "滘心、同德、沙园、昌岗、客村、琶洲、万胜围"
+  },
+  {
+    "index": 8,
+    "file": "line-details/line-009.html",
+    "system": "广州地铁",
+    "name": "9号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁9号线",
+    "station_index": "飞鹅岭、花都广场、广州北站、清塘、高增"
+  },
+  {
+    "index": 9,
+    "file": "line-details/line-010.html",
+    "system": "广州地铁",
+    "name": "10号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁10号线",
+    "station_index": "西塱、东沙、广钢新城、东湖、寺右新马路、杨箕东"
+  },
+  {
+    "index": 10,
+    "file": "line-details/line-011.html",
+    "system": "广州地铁",
+    "name": "11号线（环线）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁11号线",
+    "station_index": "广州火车站、流花、彩虹桥、芳村、琶洲、员村、天河公园、华景路、广州东站"
+  },
+  {
+    "index": 11,
+    "file": "line-details/line-012.html",
+    "system": "广州地铁",
+    "name": "12号线（东西段）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁12号线",
+    "station_index": "浔峰岗、广州体育馆；二沙岛、广州塔、赤岗、大学城南"
+  },
+  {
+    "index": 12,
+    "file": "line-details/line-013.html",
+    "system": "广州地铁",
+    "name": "13号线一期",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁13号线",
+    "station_index": "鱼珠、裕丰围、南海神庙、夏园、南岗、新塘、官湖、新沙"
+  },
+  {
+    "index": 13,
+    "file": "line-details/line-014.html",
+    "system": "广州地铁",
+    "name": "14号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁14号线",
+    "station_index": "嘉禾望岗、太和、从化客运站、东风；新和、知识城、镇龙"
+  },
+  {
+    "index": 14,
+    "file": "line-details/line-015.html",
+    "system": "广州地铁",
+    "name": "16号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁16号线",
+    "station_index": "新塘、白江、荔湖城、增城广场"
+  },
+  {
+    "index": 15,
+    "file": "line-details/line-016.html",
+    "system": "广州地铁",
+    "name": "18号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁18号线",
+    "station_index": "万顷沙、横沥、南沙客运港、番禺广场、磨碟沙、冼村"
+  },
+  {
+    "index": 16,
+    "file": "line-details/line-017.html",
+    "system": "广州地铁",
+    "name": "21号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁21号线",
+    "station_index": "天河公园、棠东、苏元、镇龙、朱村、增城广场"
+  },
+  {
+    "index": 17,
+    "file": "line-details/line-018.html",
+    "system": "广州地铁",
+    "name": "22号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁22号线",
+    "station_index": "芳村、西塱、陈头岗、广州南站、番禺广场"
+  },
+  {
+    "index": 18,
+    "file": "line-details/line-019.html",
+    "system": "广州地铁",
+    "name": "APM线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/珠江新城旅客自动输送系统",
+    "station_index": "广州塔、海心沙、大剧院、花城大道、妇儿中心、林和西"
+  },
+  {
+    "index": 19,
+    "file": "line-details/line-020.html",
+    "system": "广州地铁",
+    "name": "广佛线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广佛地铁",
+    "station_index": "新城东、东平、魁奇路、祖庙、桂城、金融高新区、西塱、沙园、沥滘"
+  },
+  {
+    "index": 20,
+    "file": "line-details/line-021.html",
+    "system": "广州地铁",
+    "name": "8号线北延段",
+    "status": "在建",
+    "source": "https://wiki.southaki.top/zh-hans/广州地铁",
+    "station_index": "滘心—江府方向，完整站序以建设单位公示为准"
+  },
+  {
+    "index": 21,
+    "file": "line-details/line-022.html",
+    "system": "广州地铁",
+    "name": "8号线东延段",
+    "status": "在建／前期状态须核验",
+    "source": "https://wiki.southaki.top/zh-hans/广州地铁",
+    "station_index": "万胜围—莲花方向（站名以最终批复为准）"
+  },
+  {
+    "index": 22,
+    "file": "line-details/line-023.html",
+    "system": "广州地铁",
+    "name": "13号线二期西段",
+    "status": "在建",
+    "source": "https://jtj.gz.gov.cn/hdjl/czc/content/post_10789115.html",
+    "station_index": "朝阳及沿线至天河公园方向共19座（站名表以官方公告为准）"
+  },
+  {
+    "index": 23,
+    "file": "line-details/line-024.html",
+    "system": "广州地铁",
+    "name": "13号线二期东段",
+    "status": "在建／进度待核验",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁13号线",
+    "station_index": "鱼珠—新沙方向，详细站名以建设单位公示为准"
+  },
+  {
+    "index": 24,
+    "file": "line-details/line-025.html",
+    "system": "广州地铁",
+    "name": "22号线北延／后续延伸",
+    "status": "规划／工程状态核验",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁22号线",
+    "station_index": "规划走向与车站名称以批复及招标资料为准"
+  },
+  {
+    "index": 25,
+    "file": "line-details/line-026.html",
+    "system": "佛山地铁与广佛线",
+    "name": "佛山地铁2号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/佛山地铁2号线",
+    "station_index": "南庄、石湾、魁奇路、湾华、登洲、林岳西、广州南站"
+  },
+  {
+    "index": 26,
+    "file": "line-details/line-027.html",
+    "system": "佛山地铁与广佛线",
+    "name": "佛山地铁3号线",
+    "status": "在建／分段开通状态需复核",
+    "source": "https://zh.wikipedia.org/wiki/佛山地铁3号线",
+    "station_index": "顺德学院、北滘公园、东平、湾华、佛山站、中山公园等站点（分段状态需查官方）"
+  },
+  {
+    "index": 27,
+    "file": "line-details/line-028.html",
+    "system": "佛山地铁与广佛线",
+    "name": "佛山地铁4号线一期",
+    "status": "在建",
+    "source": "https://zh.wikipedia.org/wiki/佛山地铁4号线",
+    "station_index": "北江大道、佛山西站、绿岛湖、季华园、港口路等（以批复线站位为准）"
+  },
+  {
+    "index": 28,
+    "file": "line-details/line-029.html",
+    "system": "佛山地铁与广佛线",
+    "name": "佛山地铁2号线二期",
+    "status": "规划／前期",
+    "source": "https://zh.wikipedia.org/wiki/佛山地铁",
+    "station_index": "西安、南庄方向（规划方案以批复文件为准）"
+  },
+  {
+    "index": 29,
+    "file": "line-details/line-030.html",
+    "system": "佛山地铁与广佛线",
+    "name": "佛山地铁11号线",
+    "status": "规划／待建设",
+    "source": "https://zh.wikipedia.org/wiki/佛山市城市轨道交通列表",
+    "station_index": "细滘—鹤洞东方向（方案站名以官方文件核对）"
+  },
+  {
+    "index": 30,
+    "file": "line-details/line-031.html",
+    "system": "深圳地铁",
+    "name": "1号线（罗宝线）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁1号线",
+    "station_index": "罗湖、国贸、老街、车公庙、世界之窗、宝安中心、机场东"
+  },
+  {
+    "index": 31,
+    "file": "line-details/line-032.html",
+    "system": "深圳地铁",
+    "name": "2号线／8号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁2号线",
+    "station_index": "赤湾、海上世界、后海、世界之窗、景田、黄贝岭、莲塘；梧桐山南、盐田路等"
+  },
+  {
+    "index": 32,
+    "file": "line-details/line-033.html",
+    "system": "深圳地铁",
+    "name": "3号线（龙岗线）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁3号线",
+    "station_index": "福保、购物公园、布吉、塘坑、双龙"
+  },
+  {
+    "index": 33,
+    "file": "line-details/line-034.html",
+    "system": "深圳地铁",
+    "name": "4号线（龙华线）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁4号线",
+    "station_index": "福田口岸、会展中心、市民中心、深圳北站、清湖、牛湖"
+  },
+  {
+    "index": 34,
+    "file": "line-details/line-035.html",
+    "system": "深圳地铁",
+    "name": "5号线（环中线）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁5号线",
+    "station_index": "赤湾、前海湾、深圳北站、布吉、太安、黄贝岭"
+  },
+  {
+    "index": 35,
+    "file": "line-details/line-036.html",
+    "system": "深圳地铁",
+    "name": "6号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁6号线",
+    "station_index": "松岗、光明大街、长圳、深圳北站、银湖、科学馆"
+  },
+  {
+    "index": 36,
+    "file": "line-details/line-037.html",
+    "system": "深圳地铁",
+    "name": "7号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁7号线",
+    "station_index": "西丽湖、西丽、车公庙、华强北、太安"
+  },
+  {
+    "index": 37,
+    "file": "line-details/line-038.html",
+    "system": "深圳地铁",
+    "name": "9号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁9号线",
+    "station_index": "前湾、深圳湾公园、车公庙、红树湾南、文锦"
+  },
+  {
+    "index": 38,
+    "file": "line-details/line-039.html",
+    "system": "深圳地铁",
+    "name": "10号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁10号线",
+    "station_index": "福田口岸、岗厦北、孖岭、华为、双拥街"
+  },
+  {
+    "index": 39,
+    "file": "line-details/line-040.html",
+    "system": "深圳地铁",
+    "name": "11号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁11号线",
+    "station_index": "碧头、机场、机场北、前海湾、后海、车公庙、岗厦北"
+  },
+  {
+    "index": 40,
+    "file": "line-details/line-041.html",
+    "system": "深圳地铁",
+    "name": "12号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁12号线",
+    "station_index": "左炮台东、南山、桃园、宝安客运站、海上田园东"
+  },
+  {
+    "index": 41,
+    "file": "line-details/line-042.html",
+    "system": "深圳地铁",
+    "name": "13号线（已开通区段）",
+    "status": "运营中／北延段建设中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁13号线",
+    "station_index": "深圳湾口岸、人才公园、后海、科苑、高新中"
+  },
+  {
+    "index": 42,
+    "file": "line-details/line-043.html",
+    "system": "深圳地铁",
+    "name": "14号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁14号线",
+    "station_index": "岗厦北、黄木岗、布吉、横岗、坪山围、沙田"
+  },
+  {
+    "index": 43,
+    "file": "line-details/line-044.html",
+    "system": "深圳地铁",
+    "name": "16号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁16号线",
+    "station_index": "大运、龙城公园、双龙、坪山围、田心"
+  },
+  {
+    "index": 44,
+    "file": "line-details/line-045.html",
+    "system": "深圳地铁",
+    "name": "20号线",
+    "status": "运营中／延伸状态核验",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁20号线",
+    "station_index": "机场北、国展北、国展、会展城方向（以最新图为准）"
+  },
+  {
+    "index": 45,
+    "file": "line-details/line-046.html",
+    "system": "深圳地铁",
+    "name": "13号线二期／北延相关工程",
+    "status": "在建",
+    "source": "https://www.szmc.net/",
+    "station_index": "请以深圳地铁集团最新施工信息与线网图核对"
+  },
+  {
+    "index": 46,
+    "file": "line-details/line-047.html",
+    "system": "深圳地铁",
+    "name": "深圳地铁五期及调整线路",
+    "status": "已批／分批建设／前期",
+    "source": "https://zh.wikipedia.org/wiki/深圳地铁",
+    "station_index": "各项目站名和数量以国家／省市批复文件与建设单位公示为准"
+  },
+  {
+    "index": 47,
+    "file": "line-details/line-048.html",
+    "system": "东莞轨道交通",
+    "name": "1号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/东莞轨道交通1号线",
+    "station_index": "东莞西、人民医院、东城南、松山湖、梅塘（完整站序见列表）"
+  },
+  {
+    "index": 48,
+    "file": "line-details/line-049.html",
+    "system": "东莞轨道交通",
+    "name": "2号线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/东莞轨道交通2号线",
+    "station_index": "东莞火车站、东城、旗峰公园、西平、寮厦、虎门火车站"
+  },
+  {
+    "index": 49,
+    "file": "line-details/line-050.html",
+    "system": "东莞轨道交通",
+    "name": "2号线三期",
+    "status": "在建",
+    "source": "https://zh.wikipedia.org/wiki/东莞轨道交通",
+    "station_index": "各站名称与数量以建设工程批复和最新施工公示为准"
+  },
+  {
+    "index": 50,
+    "file": "line-details/line-051.html",
+    "system": "东莞轨道交通",
+    "name": "3号线一期",
+    "status": "前期研究／可研阶段",
+    "source": "https://zh.wikipedia.org/wiki/东莞轨道交通",
+    "station_index": "车站位置随最终批复及设计文件确认"
+  },
+  {
+    "index": 51,
+    "file": "line-details/line-052.html",
+    "system": "香港铁路／港铁",
+    "name": "观塘线",
+    "status": "运营中",
+    "source": "https://www.mtr.com.hk/ch/corporate/operations/detail_network.html",
+    "station_index": "黄埔、油麻地、旺角、九龙塘、钻石山、调景岭"
+  },
+  {
+    "index": 52,
+    "file": "line-details/line-053.html",
+    "system": "香港铁路／港铁",
+    "name": "荃湾线",
+    "status": "运营中",
+    "source": "https://www.mtr.com.hk/ch/corporate/operations/detail_network.html",
+    "station_index": "荃湾、荔景、深水埗、旺角、尖沙咀、中环"
+  },
+  {
+    "index": 53,
+    "file": "line-details/line-054.html",
+    "system": "香港铁路／港铁",
+    "name": "港岛线",
+    "status": "运营中",
+    "source": "https://www.mtr.com.hk/ch/corporate/operations/detail_network.html",
+    "station_index": "坚尼地城、中环、金钟、铜锣湾、北角、柴湾"
+  },
+  {
+    "index": 54,
+    "file": "line-details/line-055.html",
+    "system": "香港铁路／港铁",
+    "name": "将军澳线",
+    "status": "运营中",
+    "source": "https://www.mtr.com.hk/ch/corporate/operations/detail_network.html",
+    "station_index": "北角、油塘、调景岭、将军澳、康城、宝琳"
+  },
+  {
+    "index": 55,
+    "file": "line-details/line-056.html",
+    "system": "香港铁路／港铁",
+    "name": "南港岛线（东段）",
+    "status": "运营中",
+    "source": "https://www.mtr.com.hk/ch/corporate/operations/detail_network.html",
+    "station_index": "金钟、海洋公园、黄竹坑、利东、海怡半岛"
+  },
+  {
+    "index": 56,
+    "file": "line-details/line-057.html",
+    "system": "香港铁路／港铁",
+    "name": "东涌线",
+    "status": "运营中",
+    "source": "https://www.mtr.com.hk/ch/corporate/operations/detail_network.html",
+    "station_index": "香港、九龙、奥运、南昌、青衣、欣澳、东涌"
+  },
+  {
+    "index": 57,
+    "file": "line-details/line-058.html",
+    "system": "香港铁路／港铁",
+    "name": "机场快线",
+    "status": "运营中",
+    "source": "https://www.mtr.com.hk/ch/corporate/operations/detail_network.html",
+    "station_index": "香港、九龙、青衣、机场、博览馆"
+  },
+  {
+    "index": 58,
+    "file": "line-details/line-059.html",
+    "system": "香港铁路／港铁",
+    "name": "迪士尼线",
+    "status": "运营中",
+    "source": "https://www.mtr.com.hk/ch/corporate/operations/detail_network.html",
+    "station_index": "欣澳、迪士尼"
+  },
+  {
+    "index": 59,
+    "file": "line-details/line-060.html",
+    "system": "香港铁路／港铁",
+    "name": "东铁线",
+    "status": "运营中",
+    "source": "https://www.mtr.com.hk/ch/corporate/operations/detail_network.html",
+    "station_index": "金钟、会展、红磡、九龙塘、沙田、上水、罗湖／落马洲"
+  },
+  {
+    "index": 60,
+    "file": "line-details/line-061.html",
+    "system": "香港铁路／港铁",
+    "name": "屯马线",
+    "status": "运营中",
+    "source": "https://www.mtr.com.hk/ch/corporate/operations/detail_network.html",
+    "station_index": "屯门、天水围、元朗、锦上路、尖东、红磡、钻石山、大围、乌溪沙"
+  },
+  {
+    "index": 61,
+    "file": "line-details/line-062.html",
+    "system": "香港铁路／港铁",
+    "name": "轻铁",
+    "status": "运营中",
+    "source": "https://www.mtr.com.hk/ch/customer/services/light_rail/index.html",
+    "station_index": "屯门码头、屯门、兆康、元朗、天水围等站（全站及505、507、610等路线以官网为准）"
+  },
+  {
+    "index": 62,
+    "file": "line-details/line-063.html",
+    "system": "香港铁路／港铁",
+    "name": "香港电车",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/香港电车车站列表",
+    "station_index": "坚尼地城、上环、中环、湾仔、铜锣湾、北角、筲箕湾；跑马地支线"
+  },
+  {
+    "index": 63,
+    "file": "line-details/line-064.html",
+    "system": "香港铁路／港铁",
+    "name": "广深港高速铁路香港段",
+    "status": "运营中",
+    "source": "https://www.highspeed.mtr.com.hk/",
+    "station_index": "香港西九龙（香港境内车站），车次目的地以12306及港铁公告为准"
+  },
+  {
+    "index": 64,
+    "file": "line-details/line-065.html",
+    "system": "香港铁路／港铁",
+    "name": "北环线及其他铁路项目",
+    "status": "规划／分期推进",
+    "source": "https://www.hyd.gov.hk/sc/road_and_railway/railway_network/index.html",
+    "station_index": "具体站名与出入口以运输及物流局／路政署项目文件为准"
+  },
+  {
+    "index": 65,
+    "file": "line-details/line-066.html",
+    "system": "澳门轻轨",
+    "name": "氹仔线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/澳门轻轨",
+    "station_index": "妈阁、海洋、马会、运动场、排角、路氹西、莲花、东亚运、路氹东、科大、机场、氹仔码头、协和医院"
+  },
+  {
+    "index": 66,
+    "file": "line-details/line-067.html",
+    "system": "澳门轻轨",
+    "name": "石排湾线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/澳门轻轨车站列表",
+    "station_index": "莲花、石排湾"
+  },
+  {
+    "index": 67,
+    "file": "line-details/line-068.html",
+    "system": "澳门轻轨",
+    "name": "横琴线",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/澳门轻轨",
+    "station_index": "莲花口岸、横琴"
+  },
+  {
+    "index": 68,
+    "file": "line-details/line-069.html",
+    "system": "澳门轻轨",
+    "name": "澳氹东线",
+    "status": "规划／建设状态需以官方公告复核",
+    "source": "https://www.dsop.gov.mo/sub/lrt/overview.html",
+    "station_index": "站名、分期与施工状态以澳门公共建设局专题更新为准"
+  },
+  {
+    "index": 69,
+    "file": "line-details/line-070.html",
+    "system": "广东城际",
+    "name": "广清城际",
+    "status": "运营中（分段贯通）",
+    "source": "https://zh.wikipedia.org/wiki/广清城际铁路",
+    "station_index": "广州白云、江高、竹料、花都、狮岭、银盏、清城、飞霞等（完整站序请查名录）"
+  },
+  {
+    "index": 70,
+    "file": "line-details/line-071.html",
+    "system": "广东城际",
+    "name": "广州东环城际",
+    "status": "运营中（分段贯通）",
+    "source": "https://zh.wikipedia.org/wiki/广州东环城际铁路",
+    "station_index": "花都、白云机场北、竹料、白云站、番禺等（按当前运营交路核对）"
+  },
+  {
+    "index": 71,
+    "file": "line-details/line-072.html",
+    "system": "广东城际",
+    "name": "广肇城际",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广肇城际铁路",
+    "station_index": "番禺、佛山西、狮山、三水北、肇庆等（完整站序见线路条目）"
+  },
+  {
+    "index": 72,
+    "file": "line-details/line-073.html",
+    "system": "广东城际",
+    "name": "广惠城际",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广惠城际铁路",
+    "station_index": "番禺、东莞西、松山湖北、常平南、惠州北、小金口等"
+  },
+  {
+    "index": 73,
+    "file": "line-details/line-074.html",
+    "system": "广东城际",
+    "name": "琶莲城际",
+    "status": "运营中（2025年分段开通）",
+    "source": "https://zh.wikipedia.org/wiki/琶莲城际线路",
+    "station_index": "琶洲、大学城、长洲、化龙、广州莲花山等（详细站序以官方资料为准）"
+  },
+  {
+    "index": 74,
+    "file": "line-details/line-075.html",
+    "system": "广东城际",
+    "name": "穗深城际（新塘南—深圳机场已开通段）",
+    "status": "运营中／延伸段建设中",
+    "source": "https://zh.wikipedia.org/wiki/穗深城际铁路",
+    "station_index": "新塘南、中堂、望牛墩、东莞西、虎门北、长安、深圳机场等（完整站序见条目）"
+  },
+  {
+    "index": 75,
+    "file": "line-details/line-076.html",
+    "system": "广东城际",
+    "name": "广州地铁18号线（城际化运营管理）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁18号线",
+    "station_index": "万顷沙、横沥、番禺广场、南村万博、磨碟沙、冼村"
+  },
+  {
+    "index": 76,
+    "file": "line-details/line-077.html",
+    "system": "广东城际",
+    "name": "广州地铁22号线（城际化运营管理）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广州地铁22号线",
+    "station_index": "芳村、西塱、陈头岗、广州南站、番禺广场"
+  },
+  {
+    "index": 77,
+    "file": "line-details/line-078.html",
+    "system": "广东城际",
+    "name": "广佛西环城际",
+    "status": "在建",
+    "source": "https://zh.wikipedia.org/wiki/粤港澳大湾区城际铁路",
+    "station_index": "佛山西、沿线站点、花都（中间站名请按最新项目资料核验）"
+  },
+  {
+    "index": 78,
+    "file": "line-details/line-079.html",
+    "system": "广东城际",
+    "name": "广花城际",
+    "status": "在建／按工程阶段跟踪",
+    "source": "https://zh.wikipedia.org/wiki/粤港澳大湾区城际铁路",
+    "station_index": "广州东站、沿线站点、花城街（最终站名以项目资料为准）"
+  },
+  {
+    "index": 79,
+    "file": "line-details/line-080.html",
+    "system": "广东城际",
+    "name": "新白广城际",
+    "status": "建设／分段贯通及联调状态需更新",
+    "source": "https://zh.wikipedia.org/wiki/新白广城际铁路",
+    "station_index": "竹料、新塘南及沿线站点（全站表见项目资料）"
+  },
+  {
+    "index": 80,
+    "file": "line-details/line-081.html",
+    "system": "广东城际",
+    "name": "佛莞城际／广佛南环贯通段",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/粤港澳大湾区城际铁路",
+    "station_index": "番禺、东莞西、佛山西等枢纽站及沿线车站"
+  },
+  {
+    "index": 81,
+    "file": "line-details/line-082.html",
+    "system": "清远磁浮旅游专线",
+    "name": "清远长隆磁浮旅游专线",
+    "status": "建成／试运营资料待复核",
+    "source": "https://zh.wikipedia.org/wiki/清远长隆磁浮旅游专线",
+    "station_index": "磁浮银盏、磁浮长隆（项目站名及运营范围以最新公告为准）"
+  },
+  {
+    "index": 82,
+    "file": "line-details/line-083.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "京广铁路（广东省内区段）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/京广铁路",
+    "station_index": "韶关东、英德、源潭、广州等沿线站（停站随车次而异）"
+  },
+  {
+    "index": 83,
+    "file": "line-details/line-084.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "京广高速铁路（广东段）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/京广高速铁路",
+    "station_index": "韶关、英德西、清远、广州北／广州南等（按线路与车次核对）"
+  },
+  {
+    "index": 84,
+    "file": "line-details/line-085.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "广深铁路",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广深铁路",
+    "station_index": "广州、广州东、新塘、东莞、常平、樟木头、深圳东、深圳"
+  },
+  {
+    "index": 85,
+    "file": "line-details/line-086.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "广深港高速铁路（广东段）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广深港高速铁路",
+    "station_index": "广州南、庆盛、虎门、光明城、深圳北、福田；香港西九龙"
+  },
+  {
+    "index": 86,
+    "file": "line-details/line-087.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "赣深高速铁路（广东段）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/赣深高速铁路",
+    "station_index": "河源北、龙川西、博罗北、惠州北、仲恺、光明城、深圳北等（按站序核对）"
+  },
+  {
+    "index": 87,
+    "file": "line-details/line-088.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "厦深铁路（广东段）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/厦深铁路",
+    "station_index": "潮汕、汕尾、惠阳、深圳坪山、深圳北等"
+  },
+  {
+    "index": 88,
+    "file": "line-details/line-089.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "贵广铁路（广东段）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/贵广客运专线",
+    "station_index": "怀集、肇庆东、三水南、佛山西、广州南等（按车次与线路核对）"
+  },
+  {
+    "index": 89,
+    "file": "line-details/line-090.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "南广铁路（广东段）",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/南广铁路",
+    "station_index": "郁南、南江口、云浮东、肇庆东、佛山西、广州南等"
+  },
+  {
+    "index": 90,
+    "file": "line-details/line-091.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "广汕高铁",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广汕高速铁路",
+    "station_index": "新塘、增城、罗浮山、博罗、惠州南、惠东、深汕、汕尾等（完整车站序列以铁路资料为准）"
+  },
+  {
+    "index": 91,
+    "file": "line-details/line-092.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "汕汕高铁",
+    "status": "分段开通／建设状态需核验",
+    "source": "https://zh.wikipedia.org/wiki/汕汕铁路",
+    "station_index": "汕尾、陆丰南、惠来、潮南、汕头南等（以正式开通站表为准）"
+  },
+  {
+    "index": 92,
+    "file": "line-details/line-093.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "广湛高速铁路",
+    "status": "在建／分段施工",
+    "source": "https://zh.wikipedia.org/wiki/广湛高速铁路",
+    "station_index": "广州、佛山、肇庆／云浮、阳江、茂名、湛江方向（最终站表以官方资料为准）"
+  },
+  {
+    "index": 93,
+    "file": "line-details/line-094.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "广梅汕铁路",
+    "status": "运营中",
+    "source": "https://zh.wikipedia.org/wiki/广梅汕铁路",
+    "station_index": "河源、龙川、兴宁、梅州、揭阳、汕头方向沿线站"
+  },
+  {
+    "index": 94,
+    "file": "line-details/line-095.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "广茂铁路",
+    "status": "运营中／改造工程另行跟踪",
+    "source": "https://zh.wikipedia.org/wiki/广茂铁路",
+    "station_index": "佛山、三水、肇庆、春湾、茂名等沿线站"
+  },
+  {
+    "index": 95,
+    "file": "line-details/line-096.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "广珠铁路",
+    "status": "运营中（以货运为主）",
+    "source": "https://zh.wikipedia.org/wiki/广珠铁路",
+    "station_index": "江村、佛山、江门方向货运站及高栏港站（按货运站资料核对）"
+  },
+  {
+    "index": 96,
+    "file": "line-details/line-097.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "广州—湛江方向既有铁路／深湛铁路",
+    "status": "运营中＋局部工程建设",
+    "source": "https://zh.wikipedia.org/wiki/深湛铁路",
+    "station_index": "江门、阳江、茂名、湛江等节点，具体按列车走行径路核对"
+  },
+  {
+    "index": 97,
+    "file": "line-details/line-098.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "广州站—广州南站联络线",
+    "status": "建设／项目状态按最新官方资料核验",
+    "source": "https://zh.wikipedia.org/wiki/广州铁路枢纽",
+    "station_index": "广州站、沿线联络点、广州南站（站点以工程文件为准）"
+  },
+  {
+    "index": 98,
+    "file": "line-details/line-099.html",
+    "system": "中国铁路广州局集团（广东省内）",
+    "name": "广佛江珠城际等规划线路",
+    "status": "规划",
+    "source": "https://zh.wikipedia.org/wiki/广州铁路枢纽",
+    "station_index": "规划站点可能随线网修编变化，不在此列为确定车站"
+  }
+]

@@ -166,3 +166,19 @@ document.querySelectorAll('.copy-group').forEach((button) => {
     } catch (error) { window.prompt('请复制QQ群号：', value); }
   });
 });
+
+
+// Copy the WeChat public-account name so visitors can find it inside WeChat.
+document.querySelectorAll('[data-copy-wechat]').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const accountName = button.getAttribute('data-copy-wechat') || '';
+    const previousText = button.textContent;
+    try {
+      await navigator.clipboard.writeText(accountName);
+      button.textContent = '已复制名称';
+    } catch (error) {
+      window.prompt('请复制公众号名称，并在微信中搜索：', accountName);
+    }
+    window.setTimeout(() => { button.textContent = previousText; }, 1800);
+  });
+});

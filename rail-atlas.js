@@ -54,7 +54,7 @@
   });
 
   const entities = [
-    ...db.routes.map(item => ({...item, entityType:'线路', labelKind:item.kind || '线路', title:item.name, systemName:systemNames[item.system], description:item.detail, line:`${item.from} → ${item.to}`, extra:`代表性站点：${item.stations || '请查线路完整站表'}；车辆基地：${item.facilities || '以设计/运营资料核对'}`, source:item.source})),
+    ...db.routes.map((item, routeIndex) => ({...item, routeIndex, entityType:'线路', labelKind:item.kind || '线路', title:item.name, systemName:systemNames[item.system], description:item.detail, line:`${item.from} → ${item.to}`, extra:`本站收录站序：${item.stations || '尚待补齐'}；车辆基地：${item.facilities || '以设计/运营资料核对'}`, source:item.source})),
     ...db.stations.map(item => ({...item, entityType:'车站', labelKind:item.type || '车站', title:item.name, systemName:systemNames[item.system], line:item.type, description:item.detail, extra:'车站启用范围、换乘方式及站内设施请以运营方资料核对。', source:item.source})),
     ...db.facilities.map(item => ({...item, entityType:'设施', labelKind:item.type || '设施', title:item.name, systemName:systemNames[item.system], line:item.type, description:item.detail, extra:`状态：${item.status}`, source:item.source}))
   ];
@@ -101,7 +101,7 @@
         <div class="atlas-entry-media"><img src="${escapeHTML((mediaBySystem[item.system]||{}).photo || (db.systems.find(s => s.id===item.system)||{}).image || '')}" data-fallback-src="assets/atlas-photo-fallbacks/${escapeHTML(item.system || 'gzmetro')}.svg" alt="${escapeHTML(item.systemName+'相关列车、车站或设施配图')}" loading="lazy"/><a href="${escapeHTML((mediaBySystem[item.system]||{}).photoSource || (db.systems.find(s => s.id===item.system)||{}).imageSource || item.source || '#sources')}" target="_blank" rel="noopener noreferrer">配图来源 ↗</a></div>
         <p>${escapeHTML(item.description || item.detail || '')}</p>
         ${item.extra ? `<div class="atlas-entry-detail">${escapeHTML(item.extra)}</div>` : ''}
-        <div class="atlas-entry-links"><a href="${escapeHTML(item.source || '#sources')}" target="_blank" rel="noopener noreferrer">资料来源 ↗</a>${item.system ? `<a href="#system-${escapeHTML(item.system)}">所属系统 ↑</a>` : ''}</div>
+        <div class="atlas-entry-links">${item.entityType === '线路' ? `<a class="atlas-line-detail-link" href="line-details/line-${String(item.routeIndex+1).padStart(3,'0')}.html">线路详情与站序 →</a>` : ''}<a href="${escapeHTML(item.source || '#sources')}" target="_blank" rel="noopener noreferrer">资料来源 ↗</a>${item.system ? `<a href="#system-${escapeHTML(item.system)}">所属系统 ↑</a>` : ''}</div>
       </article>`).join('');
   }
   [searchInput, systemSelect, statusSelect, typeSelect].forEach(el => {

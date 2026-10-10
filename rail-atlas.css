@@ -46,3 +46,53 @@
 .operator-card .operator-card-top{margin-bottom:9px}
 @media(max-width:1000px){.atlas-map-grid,.operator-media-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-entry-media{height:118px}}
 @media(max-width:650px){.atlas-map-grid,.operator-media-grid{grid-template-columns:1fr}.atlas-map-picture{height:210px}.operator-media-photo{height:180px}.operator-card-media{height:110px}.operator-media-heading{display:block}}
+
+/* Line detail subpages */
+.atlas-line-detail-link{font-weight:700;color:#0c786f!important}
+.atlas-line-detail-link:after{content:"";display:inline-block;width:18px;height:2px;vertical-align:middle;margin-left:6px;background:currentColor}
+.page-line-detail{background:#f8fbfa;color:#152334}
+.line-detail-hero{padding:48px clamp(22px,7vw,112px) 38px;background:#102b3a;color:#f8fbfa;position:relative;overflow:hidden}
+.line-detail-hero:after{content:"";position:absolute;right:-100px;top:-130px;width:460px;height:460px;border:1px solid rgba(101,198,180,.25);border-radius:50%;box-shadow:0 0 0 38px rgba(101,198,180,.04),0 0 0 85px rgba(91,158,210,.04);pointer-events:none}
+.line-detail-back{display:inline-block;font-size:11px;color:#a4c7c7;margin-bottom:25px}
+.line-detail-kicker{font:9px var(--mono);letter-spacing:.18em;color:#65c6b4;text-transform:uppercase;margin:0 0 14px}
+.line-detail-title-row{display:flex;gap:24px;align-items:center;position:relative;z-index:1}
+.line-detail-badge{width:15px;height:74px;border-radius:7px;flex:none;background:var(--line-color);box-shadow:0 0 0 5px color-mix(in srgb,var(--line-color) 18%,transparent)}
+.line-detail-hero h1{font:500 clamp(32px,4.7vw,55px)/1.25 var(--serif);letter-spacing:-.04em;margin:0}
+.line-detail-hero h1 small{display:block;font:10px var(--mono);letter-spacing:.07em;color:#b3c3ca;margin-top:10px}
+.line-detail-hero p{max-width:900px;font:13px/2 var(--serif);color:#c0ccd1;margin:22px 0 0;position:relative;z-index:1}
+.line-detail-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1}
+.line-detail-pill{border:1px solid rgba(255,255,255,.17);border-radius:6px;padding:7px 10px;color:#dce7e7;font-size:10px}.line-detail-pill.status{border-color:var(--line-color);background:color-mix(in srgb,var(--line-color) 18%,transparent)}
+.line-detail-content{padding:50px clamp(22px,8vw,128px) 78px}
+.line-detail-overview{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin:28px 0 42px}
+.line-detail-panel{background:#fff;border:1px solid #dfe8e2;border-radius:11px;padding:22px;min-width:0}
+.line-detail-panel h2{font:600 21px var(--serif);margin:0 0 17px;color:#1c3547}
+.line-detail-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.line-detail-fact{padding:13px;background:#f5f9f6;border-radius:7px;min-width:0}.line-detail-fact small{display:block;color:#7c9094;font:8px var(--mono);letter-spacing:.1em;margin-bottom:8px}.line-detail-fact strong{display:block;color:#244456;font:600 12px/1.7 var(--serif);overflow-wrap:anywhere}
+.line-detail-photo{width:100%;height:100%;min-height:190px;object-fit:cover;border-radius:7px;display:block;background:#e7f1ed}
+.line-detail-photo-source{font:9px/1.7 var(--sans);color:#809092;margin-top:8px}
+.line-detail-section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:34px 0 18px}.line-detail-section-head h2{font:500 clamp(25px,3vw,37px) var(--serif);letter-spacing:-.03em;margin:0}.line-detail-section-head h2 em{font-style:normal;color:#168f86}.line-detail-section-head p{font:10px/1.8 var(--sans);color:#7b888d;max-width:520px;margin:0}
+.station-diagram-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;align-items:start}
+.station-diagram{background:#fff;border:1px solid #dfe8e2;border-radius:10px;padding:20px 19px 22px;min-width:0;overflow:hidden}.station-diagram-head{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid #edf1ed;padding-bottom:12px;margin-bottom:17px}.station-diagram-head strong{font:600 13px var(--serif);color:#254355}.station-diagram-head span{font:8px var(--mono);color:#8b999b;letter-spacing:.08em}
+.station-singleline{list-style:none;margin:0;padding:0 0 0 25px;position:relative}.station-singleline:before{content:"";position:absolute;left:7px;top:9px;bottom:10px;border-left:4px solid var(--line-color);border-radius:3px}
+.station-singleline li{position:relative;min-height:38px;display:flex;align-items:flex-start;padding:0 0 15px 13px;gap:10px;font:12px/1.6 var(--serif);color:#304c5b}.station-singleline li:last-child{padding-bottom:0}.station-singleline li:before{content:"";position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;box-sizing:border-box;background:#fff;border:3px solid var(--line-color);z-index:1}.station-singleline li.end-stop:before{background:var(--line-color);box-shadow:0 0 0 3px color-mix(in srgb,var(--line-color) 15%,#fff)}.station-singleline li small{margin-left:auto;white-space:nowrap;font:8px var(--mono);color:#9aa6a8}
+.station-gap{padding:8px 10px;border:1px dashed color-mix(in srgb,var(--line-color) 45%,#dce5df);background:#f7faf8;border-radius:6px;font:10px/1.8 var(--sans);color:#7f8b8d;margin:3px 0 14px 0}
+.line-detail-loadrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:17px 0 0}.line-detail-loadrow button{background:#102b3a;border:1px solid #102b3a;color:#fff;border-radius:7px;padding:11px 14px;cursor:pointer;font-size:10px}.line-detail-loadrow button:disabled{opacity:.6;cursor:wait}.line-detail-loadrow span{font:10px/1.75 var(--sans);color:#819094}.line-detail-full-list{margin-top:15px}.line-detail-full-list[hidden]{display:none}.line-detail-source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}.line-detail-source-grid a{display:flex;flex-direction:column;gap:9px;padding:17px;border:1px solid #dae7df;background:#fff;border-radius:8px}.line-detail-source-grid strong{font:600 13px var(--serif);color:#1c3a4d}.line-detail-source-grid span{font:10px/1.7 var(--sans);color:#7d8b8f}.line-detail-usage-note{border-left:3px solid var(--line-color);padding:14px 17px;background:#eef5f1;font:11px/1.9 var(--serif);color:#65777d;margin:18px 0 0}
+.line-detail-pager{display:flex;justify-content:space-between;gap:15px;margin-top:35px;padding-top:20px;border-top:1px solid #dce6df}.line-detail-pager a{font:11px var(--sans);color:#168f86}.line-detail-pager a:last-child{text-align:right}
+@media(max-width:800px){.line-detail-overview{grid-template-columns:1fr}.station-diagram-list{grid-template-columns:1fr}.line-detail-source-grid{grid-template-columns:1fr}.line-detail-section-head{display:block}.line-detail-section-head p{margin-top:9px}}
+@media(max-width:500px){.line-detail-hero{padding-top:38px}.line-detail-title-row{gap:16px}.line-detail-badge{height:60px}.line-detail-content{padding-top:35px}.line-detail-facts{grid-template-columns:1fr}.line-detail-panel{padding:16px}}
+
+/* Operator logo and live Commons media */
+.operator-media-brandline{display:flex;align-items:center;gap:13px;padding:14px 15px 12px;border-bottom:1px solid #edf1ed;background:#fbfdfc;min-height:82px}
+.operator-media-logo{width:112px;height:54px;flex:none;object-fit:contain;border:1px solid #e1e9e4;border-radius:7px;background:#fff;padding:3px}
+.operator-media-brandline>div{display:flex;min-width:0;flex-direction:column;gap:5px}
+.operator-media-brandline>div strong{font:600 14px/1.5 var(--serif);color:#1c3547}
+.operator-logo-status{font:9px/1.5 var(--sans);color:#7d8d90}
+.operator-media-photo{height:176px}
+.operator-card-logo-row{display:flex;align-items:center;gap:8px;margin:0 0 11px;min-width:0}
+.operator-card-logo-row img{width:54px;height:35px;object-fit:contain;border:1px solid #e2ebe5;background:#fbfdfc;border-radius:5px;padding:2px;flex:none}
+.operator-card-logo-caption{font:8px/1.5 var(--sans);color:#8c999b;min-width:0}
+.operator-card-media-credit{position:absolute;right:5px;bottom:5px;background:rgba(16,43,58,.82);color:#f8fbfa;border-radius:4px;padding:3px 5px;font:7px var(--sans)}
+.operator-card-media{position:relative}
+.news-card-image img{display:block;width:100%;height:100%;object-fit:cover;background:#eaf3ef}
+.image-credit a{color:#168f86;text-decoration:underline}
+@media(max-width:650px){.operator-media-brandline{padding:13px;min-height:76px}.operator-media-logo{width:94px;height:48px}.operator-media-photo{height:190px}.operator-card-logo-row{margin-bottom:8px}}
