@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "source": "本地首发信息；尚未成功同步 B 站实时数据",
+  "profile": {
+    "mid": "3546601293351293",
+    "name": "世界交通拜年纪",
+    "face": "assets/world-transport-bnj-avatar.svg",
+    "sign": "以交通为题，以热爱相聚。通过年度拜年纪与相关投稿，记录全球交通的多样风景。",
+    "officialSpace": "https://space.bilibili.com/3546601293351293"
+  },
+  "videos": [
+    {
+      "bvid": "BV16ZFjeMEzE",
+      "title": "〖2025年交通拜年纪〗2025年世界交通拜年纪直播回放",
+      "pic": "assets/world-transport-bnj-cover.svg",
+      "localCover": "assets/world-transport-bnj-cover.svg",
+      "url": "https://www.bilibili.com/video/BV16ZFjeMEzE/",
+      "source": "公开检索结果收录；待官方接口同步封面等详细信息",
+      "featured": true
+    }
+  ],
+  "dynamic": []
+}
