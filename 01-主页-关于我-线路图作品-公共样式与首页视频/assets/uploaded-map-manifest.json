@@ -1,0 +1,62 @@
+{
+  "佛山地铁2050(V2026.3)(1).png": {
+    "title": "佛山地铁 2050+ 线路图",
+    "asset_path": "assets/original-map-files/foshan-metro-2050-v2026-3.webp",
+    "preview_path": "assets/map-thumbnails/foshan-metro-2050-v2026-3.webp",
+    "preview_bytes": 279514,
+    "source_format": "PNG",
+    "deployed_format": "WebP",
+    "source_png_bytes": 1257654,
+    "compressed_webp_bytes": 468572
+  },
+  "广州佛山实际走向2026【嶺南東道】V1.2公开版 主图.png": {
+    "title": "广州佛山地铁 2026 · 主图",
+    "asset_path": "assets/original-map-files/guangzhou-foshan-actual-2026-main.webp",
+    "preview_path": "assets/map-thumbnails/guangzhou-foshan-2026-main.webp",
+    "preview_bytes": 460790,
+    "source_format": "PNG",
+    "deployed_format": "WebP",
+    "source_png_bytes": 6383824,
+    "compressed_webp_bytes": 1258482
+  },
+  "广州佛山实际走向2026【嶺南東道】V1.2公开版 附图.png": {
+    "title": "广州佛山地铁 2026 · 附图",
+    "asset_path": "assets/original-map-files/guangzhou-foshan-actual-2026-appendix.webp",
+    "preview_path": "assets/map-thumbnails/guangzhou-foshan-2026-appendix.webp",
+    "preview_bytes": 154610,
+    "source_format": "PNG",
+    "deployed_format": "WebP",
+    "source_png_bytes": 2779368,
+    "compressed_webp_bytes": 469804
+  },
+  "茂名轨道交通2050+（真实走向）V1.0[嶺南東道].png": {
+    "title": "茂名轨道交通 2050+",
+    "asset_path": "assets/original-map-files/maoming-rail-transit-2050-v1.webp",
+    "preview_path": "assets/map-thumbnails/maoming-rail-transit-2050.webp",
+    "preview_bytes": 183080,
+    "source_format": "PNG",
+    "deployed_format": "WebP",
+    "source_png_bytes": 3063929,
+    "compressed_webp_bytes": 563406
+  },
+  "仙台轨道交通2040+（区域1）【V2026.3】(1).png": {
+    "title": "仙台轨道交通 2040+ · 区域 1",
+    "asset_path": "assets/original-map-files/sendai-rail-transit-2040-region-1.webp",
+    "preview_path": "assets/map-thumbnails/sendai-rail-transit-2040-region-1.webp",
+    "preview_bytes": 364722,
+    "source_format": "PNG",
+    "deployed_format": "WebP",
+    "source_png_bytes": 4349023,
+    "compressed_webp_bytes": 799382
+  },
+  "仙台轨道交通2040+（区域2）【V2026.3】.png": {
+    "title": "仙台轨道交通 2040+ · 区域 2",
+    "asset_path": "assets/original-map-files/sendai-rail-transit-2040-region-2.webp",
+    "preview_path": "assets/map-thumbnails/sendai-rail-transit-2040-region-2.webp",
+    "preview_bytes": 216804,
+    "source_format": "PNG",
+    "deployed_format": "WebP",
+    "source_png_bytes": 3375513,
+    "compressed_webp_bytes": 490666
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-11T00:00:00Z",
+  "strategy": "Prefer the article main image or og:image from the same source URL; only render direct source image URLs, never generic replacement photos.",
+  "cards": {
+    "news-dongguan-line2-three": {
+      "sourcePage": "https://www.dgjkjt.com.cn/dgjkjt/c100365/202607/72b1bc7a43ee43fca3702e1a8fe85071.shtml",
+      "imageUrl": "https://www.dgjkjt.com.cn/dgjkjt/c100365/202607/72b1bc7a43ee43fca3702e1a8fe85071/images/2889e497ee1d4149b9309689ab72bd7b.png",
+      "alt": "东莞轨道交通2号线三期工程轨道首铺现场，虎门大道站铺轨基地首节轨排吊装",
+      "status": "verified"
+    },
+    "news-macau-themed-train": {
+      "sourcePage": "https://www.gov.mo/zh-hans/news/915928/",
+      "imageUrl": "https://www.gov.mo/zh-hans/wp-content/uploads/sites/5/2026/06/p26fqavde5.jpeg",
+      "alt": "澳门旅游局发布的麦麦主题列车启动仪式照片",
+      "status": "verified"
+    }
+  }
+}
