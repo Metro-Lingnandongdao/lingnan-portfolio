@@ -4,6 +4,111 @@
   const byId = (id) => document.getElementById(id);
   const escapeHTML = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const systemNames = Object.fromEntries(db.systems.map(item => [item.id, item.name]));
+  let routeImageObserver = null;
+  let routeImageManifestPromise = null;
+  function getRouteImageManifest() {
+    if (!routeImageManifestPromise) {
+      routeImageManifestPromise = fetch('assets/line-images-manifest.json', { cache: 'no-cache' })
+        .then(r => r.ok ? r.json() : { routes: [] }).catch(() => ({ routes: [] }));
+    }
+    return routeImageManifestPromise;
+  }
+  function wikiTitleFromUrl(url) {
+    try {
+      const u = new URL(url, location.href);
+      if (!/wikipedia\.org$/i.test(u.hostname) || !u.pathname.includes('/wiki/')) return '';
+      return decodeURIComponent(u.pathname.split('/wiki/')[1].split('#')[0]).replace(/_/g, ' ');
+    } catch (_) { return ''; }
+  }
+  async function queryWikipediaImage(route, meta) {
+    const directTitle = (meta && meta.sourceTitle) || wikiTitleFromUrl(route.source);
+    const makeUrl = (params) => 'https://zh.wikipedia.org/w/api.php?' + new URLSearchParams({ action:'query', format:'json', formatversion:'2', origin:'*', prop:'pageimages|info', piprop:'thumbnail', pithumbsize:'1000', inprop:'url', ...params }).toString();
+    async function pagesFor(params) {
+      const response = await fetch(makeUrl(params), { headers: { Accept: 'application/json' } });
+      if (!response.ok) throw new Error('Wikipedia image endpoint unavailable');
+      const data = await response.json();
+      return data.query && Array.isArray(data.query.pages) ? data.query.pages : [];
+    }
+    if (directTitle) {
+      const pages = await pagesFor({ titles: directTitle });
+      const page = pages.find(p => p.thumbnail && p.thumbnail.source);
+      if (page) return page;
+    }
+    const queryText = `${meta?.systemName || ''} ${route.name || ''}`.trim();
+    const searchUrl = 'https://zh.wikipedia.org/w/api.php?' + new URLSearchParams({action:'query',format:'json',formatversion:'2',origin:'*',list:'search',srnamespace:'0',srlimit:'6',srsearch:queryText}).toString();
+    const response = await fetch(searchUrl, { headers: { Accept: 'application/json' } });
+    if (!response.ok) throw new Error('Wikipedia search unavailable');
+    const data = await response.json();
+    const results = (data.query && data.query.search) || [];
+    // Avoid using an unrelated image: the returned article title must share the line identifier or route-name terms.
+    const simplified = String(route.name || '').replace(/[（）()／/\s]/g, '');
+    const lineNumber = (String(route.name || '').match(/\d+/) || [])[0];
+    const ranked = results.map(item => {
+      const t = String(item.title || '').replace(/[（）()／/\s]/g, '');
+      const sameNumber = lineNumber && t.includes(lineNumber) && (t.includes('地铁') || t.includes('铁路') || t.includes('城际') || t.includes('轻轨') || t.includes('磁浮'));
+      const sameName = simplified && (t.includes(simplified) || simplified.includes(t));
+      return { title:item.title, score:(sameName ? 10:0)+(sameNumber ? 5:0) };
+    }).filter(x => x.score > 0).sort((a,b)=>b.score-a.score).slice(0,3);
+    if (!ranked.length) return null;
+    const pages = await pagesFor({ titles: ranked.map(x => x.title).join('|') });
+    return pages.find(p => p.thumbnail && p.thumbnail.source) || null;
+  }
+  async function loadRouteImage(img) {
+    const index = Number(img.dataset.lineImageIndex);
+    if (!Number.isInteger(index) || !db.routes[index]) return;
+    if (img.dataset.routeImageStarted === 'true') return;
+    img.dataset.routeImageStarted = 'true';
+    (async () => {
+      const route = db.routes[index];
+      const manifest = await getRouteImageManifest();
+      const meta = (manifest.routes || []).find(x => x.index === index) || {};
+      const fallback = img.dataset.fallbackSrc || meta.fallbackImage || `assets/line-thumbnails/line-${String(index+1).padStart(3,'0')}.svg`;
+      const label = img.closest('.atlas-entry-media')?.querySelector('[data-line-image-note]');
+      const sourceLink = img.closest('.atlas-entry-media')?.querySelector('[data-line-image-source]');
+      const setFallback = () => {
+        img.onerror = null; img.src = fallback;
+        if (label) label.textContent = '线路识别图（本地生成，非实拍）';
+        if (sourceLink) { sourceLink.href = route.source || '#sources'; sourceLink.textContent = '线路资料 ↗'; }
+      };
+      const cached = meta.localImage;
+      if (cached) {
+        img.onerror = setFallback;
+        img.onload = () => { if (label) label.textContent = '维基共享资源配图（本地缓存）'; };
+        img.src = cached;
+        if (sourceLink) { sourceLink.href = meta.imagePage || meta.sourceUrl || route.source || '#sources'; sourceLink.textContent = '图片来源 ↗'; }
+        return;
+      }
+      if (meta.remoteImage) {
+        img.onerror = setFallback;
+        img.onload = () => { if (label) label.textContent = '对应维基条目配图 · 请核对原文图注'; };
+        img.src = meta.remoteImage;
+        if (sourceLink) { sourceLink.href = meta.imagePage || meta.sourceUrl || route.source || '#sources'; sourceLink.textContent = '配图来源 ↗'; }
+        return;
+      }
+      try {
+        const page = await queryWikipediaImage(route, meta);
+        if (!page || !page.thumbnail || !page.thumbnail.source) return setFallback();
+        const imageUrl = page.thumbnail.source;
+        img.onerror = setFallback;
+        img.onload = () => {
+          if (label) label.textContent = '维基条目配图 · 请以原文核对图注';
+          if (sourceLink) { sourceLink.href = page.fullurl || (meta.sourceUrl || route.source || '#sources'); sourceLink.textContent = '维基图片来源 ↗'; }
+        };
+        img.src = imageUrl;
+      } catch (_) { setFallback(); }
+    })();
+  }
+  function observeRouteImages() {
+    if (routeImageObserver) routeImageObserver.disconnect();
+    const imgs = grid ? grid.querySelectorAll('img[data-line-image-index]') : [];
+    if (!imgs.length) return;
+    if ('IntersectionObserver' in window) {
+      routeImageObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { routeImageObserver.unobserve(entry.target); loadRouteImage(entry.target); }
+      }), { rootMargin: '250px 0px' });
+      imgs.forEach(img => routeImageObserver.observe(img));
+    } else imgs.forEach(loadRouteImage);
+  }
 
   const mediaBySystem = {
     gzmetro:{photo:'https://commons.wikimedia.org/wiki/Special:FilePath/A10_Train_%2812x005-006%29_and_B12_Train_%2807x101-102_and_07x105-106%29_at_Guangzhou_CRRC_Base%2C_Guangzhou_Metro_20240331.jpg?width=1000',photoSource:'https://commons.wikimedia.org/wiki/File:A10_Train_(12x005-006)_and_B12_Train_(07x101-102_and_07x105-106)_at_Guangzhou_CRRC_Base,_Guangzhou_Metro_20240331.jpg',map:'https://commons.wikimedia.org/wiki/Special:FilePath/Guangzhou_Metro_Linemap.svg?width=1100',mapSource:'https://commons.wikimedia.org/wiki/File:Guangzhou_Metro_Linemap.svg',officialMap:'https://www.gz.gov.cn/guangzhouinternational/home/bulletin/content/post_10133518.html',mapNote:'维基共享资源广州地铁线路图；版本需与官网最新线网图核对。'},
@@ -98,11 +203,12 @@
         <div class="atlas-entry-top"><span>${escapeHTML(item.entityType)} / ${escapeHTML(item.systemName)}</span><span class="atlas-entry-status ${statusClass(item.status || '')}">${escapeHTML(item.status || '状态待核验')}</span></div>
         <h3>${escapeHTML(item.title)}</h3>
         <div class="atlas-entry-line">${escapeHTML(item.line || item.labelKind || '')}</div>
-        <div class="atlas-entry-media"><img src="${escapeHTML((mediaBySystem[item.system]||{}).photo || (db.systems.find(s => s.id===item.system)||{}).image || '')}" data-fallback-src="assets/atlas-photo-fallbacks/${escapeHTML(item.system || 'gzmetro')}.svg" alt="${escapeHTML(item.systemName+'相关列车、车站或设施配图')}" loading="lazy"/><a href="${escapeHTML((mediaBySystem[item.system]||{}).photoSource || (db.systems.find(s => s.id===item.system)||{}).imageSource || item.source || '#sources')}" target="_blank" rel="noopener noreferrer">配图来源 ↗</a></div>
+        <div class="atlas-entry-media">${item.entityType === '线路' ? `<img src="assets/line-thumbnails/line-${String(item.routeIndex+1).padStart(3,'0')}.svg" data-line-image-index="${item.routeIndex}" data-fallback-src="assets/line-thumbnails/line-${String(item.routeIndex+1).padStart(3,'0')}.svg" alt="${escapeHTML(item.systemName+' '+item.title+'线路识别图，优先尝试加载对应维基条目图片')}" loading="lazy"/><span class="line-image-note" data-line-image-note>线路识别图（本地生成，非实拍）</span><a data-line-image-source href="${escapeHTML(item.source || '#sources')}" target="_blank" rel="noopener noreferrer">线路资料 ↗</a>` : `<img src="${escapeHTML((mediaBySystem[item.system]||{}).photo || (db.systems.find(s => s.id===item.system)||{}).image || '')}" data-fallback-src="assets/atlas-photo-fallbacks/${escapeHTML(item.system || 'gzmetro')}.svg" alt="${escapeHTML(item.systemName+'相关列车、车站或设施配图')}" loading="lazy"/><a href="${escapeHTML((mediaBySystem[item.system]||{}).photoSource || (db.systems.find(s => s.id===item.system)||{}).imageSource || item.source || '#sources')}" target="_blank" rel="noopener noreferrer">配图来源 ↗</a>`}</div>
         <p>${escapeHTML(item.description || item.detail || '')}</p>
         ${item.extra ? `<div class="atlas-entry-detail">${escapeHTML(item.extra)}</div>` : ''}
         <div class="atlas-entry-links">${item.entityType === '线路' ? `<a class="atlas-line-detail-link" href="line-details/line-${String(item.routeIndex+1).padStart(3,'0')}.html">线路详情与站序 →</a>` : ''}<a href="${escapeHTML(item.source || '#sources')}" target="_blank" rel="noopener noreferrer">资料来源 ↗</a>${item.system ? `<a href="#system-${escapeHTML(item.system)}">所属系统 ↑</a>` : ''}</div>
       </article>`).join('');
+    observeRouteImages();
   }
   [searchInput, systemSelect, statusSelect, typeSelect].forEach(el => {
     el.addEventListener(el === searchInput ? 'input' : 'change', renderEntities);

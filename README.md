@@ -202,3 +202,18 @@ lingnan-portfolio/
 
 
 线路图高清压缩版已另存为 `assets/original-map-files/` 下的 ASCII 文件名，使用 WebP 格式减少仓库体积，减少 GitHub Pages 对非 ASCII 路径与旧压缩包文件名编码的兼容问题。原地图尺寸保持不变，作品卡片显示中文标题。
+
+## 2026-10-11 图片与首页视频更新
+
+- 首页底部保留本地网站导览视频：`assets/site-tour/lingnan-website-tour.mp4`，无需外部视频服务。
+- 轨道百科的 99 条线路卡片与各自详情页已使用 99 张独立线色识别 SVG（`assets/line-thumbnails/`）作为非实拍兜底。页面会尝试读取对应维基百科条目配图；可在 GitHub Actions 运行 `Refresh route-specific Wikipedia images`。工作流只将许可清晰、可再利用的维基共享资源图片缓存到本地，其余保留原始图片链接和来源。
+- 铁路资讯 18 条新闻均有独立图片位和本地主题 SVG 回退（`assets/news-reference-fallbacks/`）。卡片会区分对应新闻原文配图、相关参考图（非现场）以及本地非实拍示意图；相关图片的出处与说明见 `NEWS-IMAGE-SOURCES.md`。
+- 不再提供按 100 文件限制拆批的 ZIP。正常整站文件仍保持根目录及 `assets/`、`line-details/`、`scripts/`、`.github/workflows/` 的原有层级。
+
+## 2026-10-11 站点图片与导览视频修订
+- 首页 `index.html` 最下方提供本地网站介绍视频：`assets/site-tour/lingnan-website-tour.mp4`，不依赖外部播放器。
+- 轨道百科 99 条线路各有独立的线路色 SVG 识别图；页面优先尝试读取对应中文维基百科条目的配图，无法取得时保留独立识别图，并链接到原始线路资料。
+- 铁路资讯页 18 条新闻各有单独的新闻图片区域。可验证的原文配图标为“原文配图”；同线路／车型的公开照片标为“相关参考图（非现场）”；本站自制信息图标为“主题示意图 · 非实拍”。外部图片加载失败会切换为本站本地 SVG。
+- 首页线路图作品已改用随站点一起发布的 WebP 路径，避免因过去的 PNG 文件名缺失而打不开原图。
+- `scripts/fetch_line_images.py` 与 `scripts/fetch_news_image_manifest.py` 可从 GitHub Actions 手动／定期尝试更新公开图片资料；不能保证外部网站或微信公众号允许自动读取。
+- 当前是单一完整网站目录，没有拆分成 GitHub 上传批次；请保持 `assets/`、`scripts/`、`.github/`、`line-details/` 等相对路径。

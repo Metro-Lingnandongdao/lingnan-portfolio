@@ -166,12 +166,14 @@ def main() -> int:
     counts = {"fetched": 0, "found": 0, "no_image": 0, "failed": 0}
 
     for card_id, url, title in get_article_cards():
+        prior = current_cards.get(card_id, {})
         entry = {
             "sourcePage": url,
             "title": title,
             "imageUrl": None,
             "alt": title,
             "status": "source-link-only",
+            "fallbackImage": prior.get("fallbackImage", f"assets/news-reference-fallbacks/{card_id}.svg"),
             "checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         }
         try:
@@ -202,30 +204,44 @@ def main() -> int:
                     "status": "source-image-found",
                     "imageContext": best["context"],
                     "imageHost": urlparse(best["url"]).netloc,
+                    "imageSourcePage": response.url,
+                    "imageCredit": urlparse(response.url).netloc,
                 })
                 counts["found"] += 1
             else:
                 counts["no_image"] += 1
                 prior = current_cards.get(card_id, {})
-                if prior.get("imageUrl") and prior.get("status") == "verified":
-                    entry.update({k: prior[k] for k in ("imageUrl", "alt", "status") if k in prior})
-                    entry["note"] = "No image was detected in this refresh; kept the previously verified image URL from this same article."
+                # Keep a known appropriate image (original photo, related reference, or labelled local illustration)
+                # if this publisher has no discoverable image in this run. Never silently replace it with a generic image.
+                keep_keys = ("imageUrl", "url", "alt", "status", "imageSourcePage", "imageCredit", "note", "fallbackImage", "page", "credit", "topic")
+                prior_image = prior.get("imageUrl") or prior.get("url")
+                if prior_image and prior.get("status") in {"verified", "related-reference", "site-illustration", "source-image-found"}:
+                    entry.update({k: prior[k] for k in keep_keys if k in prior})
+                    entry["imageUrl"] = prior_image
+                    entry["imageSourcePage"] = entry.get("imageSourcePage") or entry.get("page") or entry.get("sourcePage")
+                    entry["imageCredit"] = entry.get("imageCredit") or entry.get("credit")
+                    entry["note"] = (entry.get("note", "") + " 刷新时未发现更合适的原文图片，保留现有标注图片。请核对来源。 ").strip()
                 else:
-                    entry["note"] = "No plausible article-body image or social image was detected. Open the source article instead of substituting an unrelated photo."
+                    entry["note"] = "未识别到可信原文图；保留本地主题示意图，并提供原文入口。"
         except Exception as exc:
             counts["failed"] += 1
             # Keep known, previously verified source URLs if a transient fetch fails.
             prior = current_cards.get(card_id, {})
-            if prior.get("imageUrl") and prior.get("status") == "verified":
-                entry.update({k: prior[k] for k in ("imageUrl", "alt", "status") if k in prior})
-            entry["note"] = f"Source page could not be read during refresh ({type(exc).__name__}). Use the original article link."
+            keep_keys = ("imageUrl", "url", "alt", "status", "imageSourcePage", "imageCredit", "note", "fallbackImage", "page", "credit", "topic")
+            prior_image = prior.get("imageUrl") or prior.get("url")
+            if prior_image and prior.get("status") in {"verified", "related-reference", "site-illustration", "source-image-found"}:
+                entry.update({k: prior[k] for k in keep_keys if k in prior})
+                entry["imageUrl"] = prior_image
+                entry["imageSourcePage"] = entry.get("imageSourcePage") or entry.get("page") or entry.get("sourcePage")
+                entry["imageCredit"] = entry.get("imageCredit") or entry.get("credit")
+            entry["note"] = f"{entry.get('note', '')} 原文在本次刷新中读取失败（{type(exc).__name__}），保留既有图片或本地示意图；请核对来源。"
             print(f"[WARN] {card_id}: {type(exc).__name__}: {exc}", file=sys.stderr)
         result_cards[card_id] = entry
 
     out = {
-        "version": 1,
+        "version": 2,
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "strategy": "Use images identified on the corresponding original news page only. No generic/third-party replacement photographs.",
+        "strategy": "Prefer images from the original article. Preserve clearly labelled related-reference photos and local non-photographic illustrations when originals cannot be retrieved; never mislabel them as original article photos.",
         "summary": counts,
         "cards": result_cards,
     }

@@ -1,18 +1,31 @@
-# Railway news image provenance
+# 铁路资讯图片来源与标注规则
 
-The news page intentionally does not use unrelated stock photographs or generic transit illustrations as if they came from a particular report.
+每条新闻卡片都有独立的本地 SVG 兜底图。外部图片加载失败时，页面会切换为与该条新闻标题相关的识别图，防止图片区域空白。SVG 上注明“主题示意图 · 非实拍”，不可误认为真实新闻照片。
 
-## Verified source-page images included initially
+## 图片标注规则
 
-- `news-dongguan-line2-three`: article from Dongguan Transportation Investment Holding Group, [original report](https://www.dgjkjt.com.cn/dgjkjt/c100365/202607/72b1bc7a43ee43fca3702e1a8fe85071.shtml). The image URL is linked in that same article's image gallery/caption, showing the first rail-panel placement at Humen Dadao station's track-laying base.
-- `news-macau-themed-train`: article from the Macao SAR Government Tourism Office, [original report](https://www.gov.mo/zh-hans/news/915928/). The image is captioned “麦麦主题列车”启动仪式.
+- **原文配图**：图片 URL 来自同一条新闻正文或其原始图片库。
+- **相关参考图（非此篇报道现场）**：图片与相同线路、车型、车站或议题相关，但并非当前文章现场图；卡片下方会明确说明。
+- **主题示意图 · 非实拍**：由本站以轨道线路元素制作的 SVG，仅在没有合适可用实拍图或外部图失效时使用。
 
-## Other stories
+## 已核对的具体原文配图
 
-When an article's direct photo URL cannot be verified, the card links to the article and explains that the photo should be viewed on the source page. This is deliberate: it is better to have an explicit source link than display a photo from an unrelated story.
+- `news-dongguan-line2-three`：东莞交控集团原文 [东莞轨道交通2号线三期工程启动轨道首铺](https://www.dgjkjt.com.cn/dgjkjt/c100365/202607/72b1bc7a43ee43fca3702e1a8fe85071.shtml) 的轨道首铺现场照片。
+- `news-macau-themed-train`：澳门特区政府旅游局原文 [麦麦主题列车](https://www.gov.mo/zh-hans/news/915928/) 的启动仪式照片。
 
-## Refreshing photos
+## 相关参考图片（不是当前文章的现场图）
 
-The workflow `.github/workflows/update-news-image-manifest.yml` can be run manually from GitHub Actions, and runs weekly. It executes `scripts/fetch_news_image_manifest.py` to read the public HTML of each story and locate image URLs from the article body or article-specific social metadata. It does not download or re-host photos. It preserves manually verified image URLs if a source page is blocked or returns no recognizable article image. Some publishers block automated requests or render content with JavaScript; in those cases, the workflow may leave the card as a source-link placeholder.
+- 广州地铁国庆客流：凤凰网同题客流报道（图片链接对应其自身新闻） https://feng.ifeng.com/c/8wsKxp5s5C9
+- 全国铁路客流／节假日铁路增开：维基共享资源 CRH380A 与广州南站列车照片，图片详情页保留在 manifest 中。
+- 广东城际、穗深城际、CRH6A-A：南方+城际动车组照片与维基共享资源 CRH6 车型照片。车型相近不代表其为新闻提到的同一列车。
+- 城轨运营数据：维基共享资源广州地铁西门口站站台照片。
+- 北京地铁22号线：新浪财经 2026 年列车实车报道照片，作为同线路参考，不称为当篇空载试运行稿的原图。
+- 香港北环线支线：2021 年早期资料线路图，页面标注为历史方案，仅供背景参考，不代表 2026 年获授权的最终方案。
+- 广花城际：新快报广花城际盾构隧道相关报道照片，注明为同线早期工程参考图，不是 2026 年贯通现场。
+- 河内地铁：阿尔斯通公开动态中的河内地铁列车参考图，不代表本次采购的新车实车。
 
-Please review each fetched image before treating it as an editorially verified photo. Image copyrights, names, captions, and reuse permissions remain with the respective source publishers; check the original article for their terms.
+## 自动补图
+
+GitHub Actions 中的 `Refresh original news image links` 工作流每周尝试读取对应新闻原文的正文图片、Open Graph 元数据或 JSON-LD 图片字段。若读取到与当前文章同源的图片，会更新 `assets/news-source-images/manifest.json`，并将其标注为“原文配图”。若网站限制自动抓取，脚本保留已标注的相关参考图／本地示意图，不会静默改用无关照片。
+
+照片版权、署名及再利用授权归原发布方或相应权利人所有；链接和图片展示不代表获得转载授权。若要下载后重新托管或用于商业用途，应先核对原页面授权条款。
