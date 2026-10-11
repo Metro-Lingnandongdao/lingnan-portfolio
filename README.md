@@ -201,4 +201,4 @@ lingnan-portfolio/
 `about.html` 中新增个人公众号「嶺南東道」与世界交通拜年纪团队公众号「交建文宣」的信息卡片，支持复制名称以便在微信内搜索。公开网页检索未找到可验证的稳定公众号主页链接，因此未编造直达 URL。来源与后续补链说明见 `WECHAT-ACCOUNTS-SOURCES.md`。
 
 
-线路图原图已另存为 `assets/original-map-files/` 下的 ASCII 文件名，减少 GitHub Pages 对非 ASCII 路径与旧压缩包文件名编码的兼容问题。作品卡片中显示的中文文件名不变。
+线路图高清压缩版已另存为 `assets/original-map-files/` 下的 ASCII 文件名，使用 WebP 格式减少仓库体积，减少 GitHub Pages 对非 ASCII 路径与旧压缩包文件名编码的兼容问题。原地图尺寸保持不变，作品卡片显示中文标题。

@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560">
   <rect width="960" height="560" fill="#e9e5da"/><path d="M0 420L960 210V560H0Z" fill="#d9e2dc"/><path d="M0 470L960 260" stroke="#5b9ed2" stroke-width="5" stroke-opacity=".65"/>
-  <text x="54" y="54" fill="#9b5d2e" font-family="monospace" font-size="18" letter-spacing="4">CITY CONNECTIONS / 03</text>
+  <text x="54" y="54" fill="#168f86" font-family="monospace" font-size="18" letter-spacing="4">CITY CONNECTIONS / 03</text>
   <text x="54" y="118" fill="#152334" font-family="'Noto Serif SC',serif" font-size="42">换乘信息，如何被看见？</text>
   <text x="56" y="154" fill="#707c7f" font-family="monospace" font-size="15" letter-spacing="3">WAYFINDING · INFORMATION DESIGN</text>
   <g transform="translate(120 220)"><path d="M0 40H620" stroke="#152334" stroke-width="8"/><path d="M180 40V165H360V40M360 40V-8H520V40" fill="none" stroke="#c97835" stroke-width="8" stroke-linejoin="round"/><path d="M65 40V100H180M520 40V120H620" fill="none" stroke="#75a5c3" stroke-width="8" stroke-linejoin="round"/>
   <g fill="#f8f5ed" stroke="#152334" stroke-width="4"><circle cx="0" cy="40" r="10"/><circle cx="180" cy="40" r="10"/><circle cx="180" cy="165" r="10"/><circle cx="360" cy="165" r="10"/><circle cx="360" cy="40" r="10"/><circle cx="520" cy="40" r="10"/><circle cx="620" cy="40" r="10"/><circle cx="65" cy="100" r="10"/><circle cx="620" cy="120" r="10"/></g>
   <g font-family="monospace" font-size="13" fill="#152334"><text x="-4" y="21">A</text><text x="165" y="21">B</text><text x="145" y="192">TRANSFER</text><text x="340" y="192">C</text><text x="502" y="21">D</text><text x="610" y="21">E</text></g></g>
   <rect x="685" y="230" width="220" height="155" fill="#152334"/><rect x="685" y="230" width="12" height="155" fill="#45b8a8"/><text x="720" y="270" fill="#edf4f2" font-family="'Noto Serif SC',serif" font-size="24">四网融合</text><text x="720" y="304" fill="#aeb9c4" font-family="monospace" font-size="13">METRO ↗</text><text x="720" y="332" fill="#aeb9c4" font-family="monospace" font-size="13">INTERCITY →</text><text x="720" y="360" fill="#aeb9c4" font-family="monospace" font-size="13">EXIT ↓</text>
-  <text x="56" y="526" fill="#707c7f" font-family="monospace" font-size="14" letter-spacing="2">线路信息 · 换乘引导 · 视觉层级</text><text x="905" y="526" text-anchor="end" fill="#9b5d2e" font-family="monospace" font-size="16">03 / 03</text>
+  <text x="56" y="526" fill="#707c7f" font-family="monospace" font-size="14" letter-spacing="2">线路信息 · 换乘引导 · 视觉层级</text><text x="905" y="526" text-anchor="end" fill="#168f86" font-family="monospace" font-size="16">03 / 03</text>
 </svg>
